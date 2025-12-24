@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <title>EUR/USD Macro Monitor</title>
+    <style>
+        :root {
+            --bg-body: #0f172a;       /* Slate 900 */
+            --bg-card: #1e293b;       /* Slate 800 */
+            --text-main: #f1f5f9;     /* Slate 100 */
+            --text-muted: #94a3b8;    /* Slate 400 */
+            --border: #334155;        /* Slate 700 */
+            --accent: #38bdf8;        /* Sky 400 */
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --success: #34d399;       /* Emerald 400 */
+            --font-main: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #fff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Tarjetas de Reporte */
+        .report-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .report-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent);
+        }
+
+        /* Borde lateral de acento */
+        .report-card::before {
+            content: "";
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 4px;
+            background: var(--accent);
+            opacity: 0.8;
+        }
+
+        .timestamp {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            background: var(--accent-glow);
+            padding: 4px 12px;
+            border-radius: 99px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        /* Estilos del contenido generado */
+        .content h3 {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+        }
+        
+        .content h3::before {
+            content: "▹";
+            margin-right: 8px;
+            color: var(--accent);
+        }
+
+        .content p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .content strong {
+            color: var(--success); /* Resalta datos clave en verde */
+            font-weight: 600;
+        }
+        
+        /* Diagnóstico final destacado */
+        .content p:last-child strong {
+            color: #fbbf24; /* Amber para la conclusión */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .header h1 { font-size: 1.5rem; }
+            .report-card { padding: 20px; border-radius: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>EUR/USD Algorithmic Causality</h1>
+            <p>Monitor de Estructura de Mercado & Flujos en Tiempo Real</p>
+        </div>
+        
+        <div id="archive">
+            <!-- MR_REPORTS_START -->
+<!-- MR_REPORT_CARD_START -->
+        <div class="report-card">
+            <div class="timestamp">REPORTE GENERADO: 24-Dec-2025 14:42 UTC</div>
+            <div class="content">
+                <div class="report-section">
+  <h3>1. Estado del Conductor (Bonos)</h3>
+  <p>El diferencial de rendimiento (spread) entre el <strong>US 10Y Treasury (4.22%)</strong> y el <strong>German 10Y Bund (2.38%)</strong> se mantiene estable en los 184 puntos básicos. En las últimas 6 horas, la actividad en el mercado de renta fija ha sido mínima debido al cierre temprano de las plazas europeas por la festividad de Nochebuena. El flujo de capital hacia el dólar estadounidense derivado del diferencial de tasas se encuentra en un estado de "hibernación técnica". No se observa una presión de venta en los bonos soberanos que justifique un movimiento direccional en el EUR/USD; la estabilidad del spread confirma que el par está operando bajo una dinámica de mantenimiento de valor relativo sin catalizadores de fuga de capital.</p>
+  
+  <h3>2. Datos Recientes y Narrativa</h3>
+  <p><strong>CONTEXTO VACÍO:</strong> No se han reportado indicadores macroeconómicos de alto impacto (NFP, CPI o decisiones de tipos) en las últimas 6 horas. La validación del calendario económico confirma cierres bancarios totales en Alemania y cierres parciales en los Estados Unidos (13:00 EST). La narrativa de mercado, según los terminales de noticias financieras, está dominada por la <strong>"Iliquidez Estacional"</strong> y el reequilibrio de carteras de fin de año. El <strong>S&P 500 Futures</strong> muestra una volatilidad nula y el <strong>VIX (13.40)</strong> se encuentra en niveles de complacencia estructural, lo que elimina cualquier prima de riesgo geopolítico o macroeconómico inmediato que pudiera afectar al euro.</p>
+  
+  <h3>3. Conclusión Causal Rigurosa</h3>
+  <p><strong>DIAGNÓSTICO:</strong> La acción del precio actual del EUR/USD es una manifestación de <strong>inercia técnica por baja liquidez</strong>. La causalidad no reside en datos macroeconómicos frescos, sino en la ausencia de los mismos. El par se encuentra atrapado en un rango estrecho debido a que los conductores primarios (rendimientos de bonos) están estáticos y los creadores de mercado han reducido su exposición. Cualquier movimiento superior a 15 pips en este entorno debe ser catalogado como una <strong>"Anomalía de Flujo"</strong> por falta de profundidad de mercado (thin market) y no como un cambio en los fundamentos de la Eurozona o EE.UU.</p>
+</div>
+            </div>
+        </div>
+        <!-- MR_REPORT_CARD_END -->
+<!-- MR_REPORT_CARD_START -->
+        <div class="report-card">
+            <div class="timestamp">REPORTE GENERADO: 24-Dec-2025 08:38 UTC</div>
+            <div class="content">
+                <div class="report-section">
+  <h3>1. Estado del Conductor (Bonos)</h3>
+  <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.16%)</strong> y el <strong>German Bund 10Y (2.86%)</strong> se sitúa actualmente en los <strong>130 puntos básicos</strong>. En las últimas 24 horas, hemos observado una compresión marginal en los rendimientos estadounidenses (-1 pb) frente a una caída más pronunciada en los alemanes (-4 pb). </p>
+  <ul>
+    <li><strong>Divergencia Detectada:</strong> A pesar de que la caída superior en el rendimiento del Bund debería presionar al EUR a la baja, el par <strong>EUR/USD se mantiene resiliente cerca de 1.1800</strong>. Esta anomalía se explica por un flujo de cierre de posiciones de fin de año ("year-end rebalancing") y una debilidad estructural del USD, que se encamina a su peor desempeño anual desde 2017.</li>
+    <li><strong>Flujo de Capital:</strong> La estabilidad de los futuros del S&P 500 (6,959) y un <strong>VIX en 14.00</strong> confirman un entorno de baja volatilidad y apetito por el riesgo neutral, típico de la víspera de Navidad, lo que limita las compras de refugio en USD.</li>
+  </ul>
+
+  <h3>2. Datos Recientes y Narrativa</h3>
+  <p>La narrativa actual está dominada por la digestión del dato de <strong>PIB del Q3 en EE.UU.</strong> publicado ayer (23 de diciembre), que sorprendió al alza con un <strong>4.3%</strong> (frente al 3.3% esperado). </p>
+  <ul>
+    <li><strong>Validación de Recencia:</strong> En las últimas 6 horas (sesión asiática y apertura europea del 24 de diciembre), no se han reportado indicadores de alto impacto ("Tier 1"). Los titulares de Reuters y Bloomberg confirman un <strong>"Holiday-thinned trading"</strong> (operativa reducida por festivo).</li>
+    <li><strong>Contraste Hard Data vs. Narrativa:</strong> Aunque el "Hard Data" (PIB 4.3%) es objetivamente alcista para el dólar, la "Narrativa de Mercado" lo ignora. Los inversores han rotado hacia una perspectiva de 2026 donde se descuentan dos recortes de tipos por parte de la Fed, mientras que el BCE mantiene un sesgo <strong>hawkish</strong>, incluso sugiriendo posibles subidas de tipos para 2026 debido a una inflación persistente.</li>
+  </ul>
+
+  <h3>3. Conclusión Causal Rigurosa</h3>
+  <p><strong>DIAGNÓSTICO:</strong> La permanencia del EUR/USD en la zona de 1.1800 no responde a los fundamentos macroeconómicos de las últimas 24 horas (que favorecerían al USD por el PIB), sino a la <strong>estructura de mercado de baja liquidez</strong> por el cierre temprano de las bolsas (Navidad) y al <strong>posicionamiento técnico de fin de año</strong>. La causalidad real es una capitulación del USD ante la expectativa de divergencia de políticas en 2026: una Fed que iniciará ciclo de recortes frente a un BCE que ha pausado su flexibilización. El precio actual representa un "estado de tregua" por falta de volumen institucional.</p>
+</div>
+            </div>
+        </div>
+        <!-- MR_REPORT_CARD_END -->
+<!-- MR_REPORT_CARD_START -->
+        <div class="report-card">
+            <div class="timestamp">REPORTE GENERADO: 24-Dec-2025 08:35 UTC</div>
+            <div class="content">
+                <div class="report-section"><h3>Test</h3><p>Hola</p></div>
+            </div>
+        </div>
+        <!-- MR_REPORT_CARD_END -->
+            <!-- MR_REPORTS_END -->
+        </div>
+    </div>
+</body>
+</html>
