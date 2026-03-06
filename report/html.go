@@ -197,7 +197,7 @@ func UpdateHTML(newReportContent string) error {
             function timeAgo(date) {
                 if (!date || isNaN(date.getTime())) return "";
 
-                const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+                let seconds = Math.floor((Date.now() - date.getTime()) / 1000);
                 if (seconds < 60) return "hace menos de 1 minuto";
 
                 const intervals = [
@@ -208,14 +208,21 @@ func UpdateHTML(newReportContent string) error {
                     { label: 'minuto', seconds: 60, plural: 's' }
                 ];
 
+                let parts = [];
                 for (let i = 0; i < intervals.length; i++) {
                     const interval = intervals[i];
                     const count = Math.floor(seconds / interval.seconds);
                     if (count >= 1) {
-                        return "hace " + count + " " + interval.label + (count === 1 ? "" : interval.plural);
+                        parts.push(count + " " + interval.label + (count === 1 ? "" : interval.plural));
+                        seconds -= count * interval.seconds;
+                        if (parts.length === 2) break; // Máximo dos unidades
+                    } else if (parts.length === 1) {
+                        // Si ya tenemos una unidad mayor (ej. horas) pero 0 de la siguiente (minutos), nos detenemos.
+                        break;
                     }
                 }
-                return "hace menos de 1 minuto";
+
+                return "hace " + parts.join(" y ");
             }
 
             document.querySelectorAll('.timestamp').forEach(function (ts) {
