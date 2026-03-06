@@ -2,13 +2,11 @@ name: Auto Forex Analyst
 
 on:
   schedule:
-    # Se ejecuta cada 4 horas (00:00, 04:00, 08:00... UTC)
     - cron: '0 */4 * * *'
-  # Esto habilita un botón manual para que puedas probarlo cuando quieras
   workflow_dispatch:
 
 permissions:
-  contents: write  # IMPORTANTE: Permiso para que el bot pueda guardar el HTML actualizado
+  contents: write
 
 jobs:
   run-analysis:
@@ -16,21 +14,20 @@ jobs:
     
     steps:
       - name: Descargar repositorio
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Instalar Python
-        uses: actions/setup-python@v4
+      - name: Configurar Go
+        uses: actions/setup-go@v5
         with:
-          python-version: '3.10'
+          go-version: '1.25.x'
 
       - name: Instalar dependencias
-        run: pip install -r requirements.txt
+        run: go mod download
 
       - name: Ejecutar Agente IA
         env:
-          # Aquí conectamos el Secreto de GitHub con el script
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python main.py
+        run: go run main.go
 
       - name: Guardar cambios (Commit & Push)
         run: |

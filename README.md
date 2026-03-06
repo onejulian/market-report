@@ -2,7 +2,7 @@
 
 > **AI-Powered Macro Strategist**: Un sistema autónomo que analiza la estructura del mercado forex en tiempo real, buscando causalidad rigurosa entre flujos de bonos, datos macroeconómicos y sentimiento de riesgo.
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Go](https://img.shields.io/badge/Go-1.25%2B-blue)
 ![AI](https://img.shields.io/badge/AI-Gemini%203%20Flash-orange)
 
 ## 🧠 ¿Qué es esto?
@@ -24,14 +24,14 @@ El sistema sigue una estricta jerarquía de validación de datos:
 -   **Live Data Access:** Utiliza Google Search Tooling para obtener rendimientos de bonos y noticias financieras al instante.
 -   **Dashboard Web Moderno:** Genera un reporte en `index.html` con diseño profesional, modo oscuro y responsive.
 -   **Cero Alucinaciones:** Implementa controles estrictos para verificar fechas y fuentes antes de emitir un juicio.
--   **Historial Persistente:** Mantiene un archivo de los últimos 10 reportes para análisis de tendencias.
+-   **Historial Persistente:** Mantiene un archivo de los últimos múltiples reportes para análisis de tendencias dentro del dashboard.
 
 ---
 
 ## 🛠️ Instalación y Uso Local
 
 ### Prerrequisitos
--   Python 3.10 o superior.
+-   [Go (Golang)](https://go.dev/doc/install) 1.25 o superior.
 -   Una API Key de Google Gemini (Google AI Studio).
 
 ### Pasos
@@ -44,18 +44,23 @@ El sistema sigue una estricta jerarquía de validación de datos:
 
 2.  **Instalar dependencias:**
     ```bash
-    pip install -r requirements.txt
+    go mod download
     ```
 
 3.  **Configurar API Key:**
-    *   **Mac/Linux:** `export GEMINI_API_KEY="tu_api_key_aqui"`
-    *   **Windows (PowerShell):** `$env:GEMINI_API_KEY="tu_api_key_aqui"`
+    *   Crea un archivo `.env` en la raíz del proyecto y añade:
+        ```env
+        GEMINI_API_KEY=tu_api_key_aqui
+        ```
+    *   O configúralo directamente en tu terminal:
+        *   **Mac/Linux:** `export GEMINI_API_KEY="tu_api_key_aqui"`
+        *   **Windows (PowerShell):** `$env:GEMINI_API_KEY="tu_api_key_aqui"`
 
 4.  **Ejecutar el análisis:**
     ```bash
-    python main.py
+    go run main.go
     ```
-    *Esto generará o actualizará el archivo `index.html` en la raíz.*
+    *Esto iterará sobre el mercado, generará un reporte y actualizará el archivo `index.html` en la raíz.*
 
 ---
 
@@ -65,7 +70,7 @@ Este repositorio incluye un workflow configurado (`.github/workflows/monitor.yml
 
 ### Configuración
 1.  Ve a `Settings` > `Secrets and variables` > `Actions` en tu repositorio de GitHub.
-2.  Crea un **New repository secret** llamado `GEMINI_API_KEY` y pega tu clave.
+2.  Crea un **New repository secret** llamado `GEMINI_API_KEY` y pega tu clave de Gemini.
 3.  Habilita los permisos de escritura para el workflow en `Settings` > `Actions` > `General` > `Workflow permissions` (Seleccionar "Read and write permissions").
 
 ### Funcionamiento
@@ -80,11 +85,15 @@ Este repositorio incluye un workflow configurado (`.github/workflows/monitor.yml
 ```text
 market-report/
 ├── .github/workflows/
-│   └── monitor.yml    # Configuración del cron job (cada 4h)
-├── main.py            # Cerebro del sistema (Prompt Engineering + Lógica)
-├── index.html         # Dashboard (Frontend generado automáticamente)
-├── requirements.txt   # Dependencias (google-genai)
-└── README.md          # Documentación
+│   └── monitor.yml    # Configuración del cron job en GitHub Actions
+├── analyzer/
+│   └── gemini.go      # Interacción principal con la API de Gemini (Prompt Engineering)
+├── report/
+│   └── html.go        # Lógica de persistencia, inyección y limpieza del HTML
+├── main.go            # Punto de entrada de la aplicación Go
+├── index.html         # Dashboard Web (Frontend con modo oscuro)
+├── go.mod / go.sum    # Dependencias de Go
+└── README.md          # Documentación principal
 ```
 
 ---
@@ -92,4 +101,3 @@ market-report/
 ## ⚠️ Disclaimer
 
 Esta herramienta es un experimento de **investigación algorítmica**. Los reportes generados son diagnósticos automatizados basados en modelos de lenguaje y datos públicos. **No constituyen asesoramiento financiero ni recomendación de inversión.** El trading de divisas conlleva un alto nivel de riesgo.
-

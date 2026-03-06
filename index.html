@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,21 @@
     <title>EUR/USD Macro Monitor</title>
     <style>
         :root {
-            --bg-body: #0f172a;       /* Slate 900 */
-            --bg-card: #1e293b;       /* Slate 800 */
-            --text-main: #f1f5f9;     /* Slate 100 */
-            --text-muted: #94a3b8;    /* Slate 400 */
-            --border: #334155;        /* Slate 700 */
-            --accent: #38bdf8;        /* Sky 400 */
+            --bg-body: #0f172a;
+            /* Slate 900 */
+            --bg-card: #1e293b;
+            /* Slate 800 */
+            --text-main: #f1f5f9;
+            /* Slate 100 */
+            --text-muted: #94a3b8;
+            /* Slate 400 */
+            --border: #334155;
+            /* Slate 700 */
+            --accent: #38bdf8;
+            /* Sky 400 */
             --accent-glow: rgba(56, 189, 248, 0.15);
-            --success: #34d399;       /* Emerald 400 */
+            --success: #34d399;
+            /* Emerald 400 */
             --font-main: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
 
@@ -80,7 +88,9 @@
         .report-card::before {
             content: "";
             position: absolute;
-            left: 0; top: 0; bottom: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
             width: 4px;
             background: var(--accent);
             opacity: 0.8;
@@ -111,7 +121,7 @@
             display: flex;
             align-items: center;
         }
-        
+
         .content h3::before {
             content: "▹";
             margin-right: 8px;
@@ -124,253 +134,600 @@
         }
 
         .content strong {
-            color: var(--success); /* Resalta datos clave en verde */
+            color: var(--success);
+            /* Resalta datos clave en verde */
             font-weight: 600;
         }
-        
+
         /* Diagnóstico final destacado */
         .content p:last-child strong {
-            color: #fbbf24; /* Amber para la conclusión */
+            color: #fbbf24;
+            /* Amber para la conclusión */
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Mobile */
         @media (max-width: 600px) {
-            body { padding: 12px; }
-            .header h1 { font-size: 1.5rem; }
-            .report-card { padding: 20px; border-radius: 12px; }
+            body {
+                padding: 12px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .report-card {
+                padding: 20px;
+                border-radius: 12px;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
             <h1>EUR/USD Algorithmic Causality</h1>
             <p>Monitor de Estructura de Mercado & Flujos en Tiempo Real</p>
         </div>
-        
+
         <div id="archive">
             <!-- MR_REPORTS_START -->
-<!-- MR_REPORT_CARD_START -->
-        <div class="report-card">
-            <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 16:42 UTC</div>
-            <div class="content">
-                <div class="report-section">
-  <h3>1. Estado del Conductor (Bonos)</h3>
-  <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.100%)</strong> y el <strong>German Bund 10Y (2.746%)</strong> se sitúa actualmente en <strong>-135.4 bps</strong>. A pesar de la debilidad en los datos de empleo publicados hoy, los rendimientos estadounidenses mantienen una resiliencia estructural. La dirección del flujo de capital favorece al dólar, no por una divergencia de política monetaria agresiva, sino por la prima de riesgo geopolítico que mantiene los bonos del Tesoro como el activo de refugio primario frente a la deuda europea.</p>
-  
-  <h3>2. Datos Recientes y Narrativa</h3>
-  <ul>
-    <li><strong>Validación Macro (13:30 UTC):</strong> El reporte de <strong>Nóminas No Agrícolas (NFP)</strong> de febrero mostró una pérdida inesperada de <strong>92,000 empleos</strong>, un dato que en condiciones normales de mercado habría provocado una venta masiva de USD.</li>
-    <li><strong>Narrativa Dominante:</strong> El mercado ignora el "Hard Data" laboral debido a la escalada del conflicto en Oriente Medio (Guerra de Irán, día 7). El petróleo ha subido un <strong>6%</strong> en las últimas horas, alimentando expectativas de inflación por costes y forzando una demanda de "Safe-Haven".</li>
-    <li><strong>Sentimiento de Riesgo:</strong> El <strong>VIX</strong> ha repuntado un <strong>+4.99%</strong> situándose en 24.12, mientras que los futuros del <strong>S&P 500</strong> caen un <strong>-0.96%</strong>. Esta aversión al riesgo está neutralizando el impacto bajista del NFP sobre el dólar.</li>
-  </ul>
-  
-  <h3>3. Conclusión Causal Rigurosa</h3>
-  <p><strong>DIAGNÓSTICO:</strong> Se observa una <strong>Divergencia Crítica</strong> entre el valor fundamental del dólar (debilitado por el pésimo NFP) y su precio de mercado (fortalecido por flujos de refugio). La causalidad actual del EUR/USD en 1.1600 no responde a la salud económica de EE.UU., sino a la <strong>fractura del sentimiento de riesgo global</strong>. El euro actúa como moneda de financiación o activo de riesgo, siendo castigado por la proximidad geográfica y energética al conflicto, mientras que el USD captura la liquidez global que huye de la renta variable. El "Current State of Truth" es un mercado dominado por la geopolítica donde el dato macro es secundario frente a la seguridad del capital.</p>
-</div>
-            </div>
-        </div>
-        <!-- MR_REPORT_CARD_END -->
-<!-- MR_REPORT_CARD_START -->
-        <div class="report-card">
-            <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 12:58 UTC</div>
-            <div class="content">
-                <div class="report-section">
-  <h3>1. Estado del Conductor (Bonos)</h3>
-  <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.17%)</strong> y el <strong>German Bund 10Y (2.86%)</strong> se sitúa actualmente en <strong>131 puntos básicos (bps)</strong>. Se observa una ampliación del spread a favor del dólar, impulsada por un incremento de +3 bps en la nota estadounidense frente a un avance marginal de +1 bps en el bono alemán durante la sesión europea. Esta divergencia refleja una mayor prima de riesgo inflacionario en EE. UU., exacerbada por el repunte en los precios de la energía, lo que ejerce una presión bajista mecánica y fundamental sobre el EUR/USD, manteniéndolo por debajo del nivel psicológico de 1.1600.</p>
-  
-  <h3>2. Datos Recientes y Narrativa</h3>
-  <p>La narrativa del mercado está dominada por una <strong>"Triple Convergencia de Riesgo"</strong> validada en las últimas 6 horas:</p>
-  <ul>
-    <li><strong>Geopolítica (Alta Relevancia):</strong> La escalada del conflicto entre EE. UU. e Irán tras incidentes navales ha disparado el precio del crudo, alimentando temores de una espiral inflacionaria global que beneficia al USD como activo de refugio y moneda de "petro-protección".</li>
-    <li><strong>Calendario Macro (Catalizador Inmediato):</strong> El mercado se encuentra en modo de espera cautelosa ante la publicación de las <strong>Nóminas No Agrícolas (NFP)</strong> de EE. UU. hoy. La resiliencia del mercado laboral estadounidense (con desempleo previo en 4.3%) respalda la tesis de "tasas altas por más tiempo" de la Fed.</li>
-    <li><strong>Sentimiento de Riesgo:</strong> Los futuros del S&P 500 operan con pérdidas del <strong>-0.96%</strong>, mientras que el VIX muestra una presión ascendente. Esta aversión al riesgo (Risk-Off) está forzando la liquidación de posiciones largas en EUR para cubrir flujos hacia el Tesoro de EE. UU.</li>
-  </ul>
-  
-  <h3>3. Conclusión Causal Rigurosa</h3>
-  <p><strong>DIAGNÓSTICO:</strong> La debilidad actual del EUR/USD (cotizando cerca de 1.1582) no es producto de una debilidad intrínseca del Euro, sino de una <strong>dominancia absoluta del Dólar por flujo de refugio y arbitraje de tasas</strong>. La causalidad es directa: el aumento del riesgo geopolítico eleva las expectativas de inflación vía energía, lo que obliga a los mercados a descontar menos recortes de la Fed en comparación con el BCE. El precio está "atrapado" en una estructura bajista de corto plazo hasta que el dato de NFP confirme o desmienta la capacidad de la economía estadounidense para absorber el shock energético actual.</p>
-</div>
-            </div>
-        </div>
-        <!-- MR_REPORT_CARD_END -->
-<!-- MR_REPORT_CARD_START -->
-        <div class="report-card">
-            <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 08:39 UTC</div>
-            <div class="content">
-                <div class="report-section">
-  <h3>1. Estado del Conductor (Bonos)</h3>
-  <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.14%)</strong> y el <strong>German 10Y Bund (2.85%)</strong> se sitúa actualmente en <strong>129 puntos básicos (bps)</strong>. Aunque los rendimientos del Bund alemán experimentaron un repunte reciente de +11 bps debido a los riesgos inflacionarios derivados del conflicto en Oriente Medio, el Tesoro de EE. UU. mantiene una ventaja estructural de carry significativa. La estabilidad del yield estadounidense en 4.14% en las últimas 24 horas, frente a la volatilidad europea, confirma que el flujo de capital sigue favoreciendo al dólar por diferencial de tasas reales.</p>
-  
-  <h3>2. Datos Recientes y Narrativa</h3>
-  <p>La narrativa del mercado en las últimas 6 horas está dominada por una <strong>escalada geopolítica crítica</strong>. Informes sobre tensiones directas entre EE. UU. e Irán (incluyendo el hundimiento de un buque iraní y la evacuación de personal en Qatar) han activado un modo de "Safe-Haven" (refugio seguro). 
-  <ul>
-    <li><strong>Riesgo (Mood):</strong> El índice <strong>VIX</strong> ha saltado a <strong>22.88</strong>, reflejando un aumento sustancial en el miedo del mercado. Los futuros del <strong>S&P 500</strong> caen un <strong>-0.96%</strong>.</li>
-    <li><strong>Calendario (Catalizador):</strong> El mercado se encuentra en parálisis táctica a la espera del <strong>Non-Farm Payrolls (NFP)</strong> que se publicará hoy. Los datos de empleo de EE. UU. determinarán si la fortaleza del USD es puramente geopolítica o si está respaldada por una economía que no permite recortes de la Fed.</li>
-    <li><strong>Validación:</strong> El par EUR/USD muestra debilidad técnica, presionando el nivel de <strong>1.1600</strong>, impulsado por la liquidación de activos de riesgo.</li>
-  </ul>
-  </p>
-  
-  <h3>3. Conclusión Causal Rigurosa</h3>
-  <p><strong>DIAGNÓSTICO:</strong> La caída del EUR/USD hacia 1.1600 no es una respuesta a datos macroeconómicos europeos, sino una <strong>fuga hacia la calidad (Flight to Quality)</strong> provocada por el conflicto en Oriente Medio. La causalidad es doble: primero, el <strong>vuelo al dólar como refugio</strong> ante el desplome de la renta variable (S&P 500 -0.96%); segundo, la <strong>resiliencia de los yields de EE. UU.</strong> que, a pesar del riesgo, no caen debido a la expectativa de un NFP sólido y una inflación persistente. El EUR actúa como "proxy" de riesgo y sufre por la proximidad geográfica y energética al conflicto, invalidando cualquier intento de recuperación basado en fundamentales locales.</p>
-</div>
-            </div>
-        </div>
-        <!-- MR_REPORT_CARD_END -->
-<!-- MR_REPORT_CARD_START -->
-        <div class="report-card">
-            <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 05:10 UTC</div>
-            <div class="content">
-                <div class="report-section">
-  <h3>1. Estado del Conductor (Bonos)</h3>
-  <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.14%)</strong> y el <strong>German Bund 10Y (2.85%)</strong> se sitúa actualmente en <strong>129 puntos básicos (bps)</strong> a favor del dólar estadounidense. Este spread se ha ampliado en las últimas 48 horas debido a un repunte en los rendimientos de EE. UU., impulsado por el temor inflacionario derivado del shock en los precios de la energía. La correlación es directa: el flujo de capital está abandonando la renta fija europea en favor de la seguridad y el mayor carry del Tesoro americano, ejerciendo una presión gravitacional sobre el EUR/USD hacia el nivel de 1.1600.</p>
-  
-  <h3>2. Datos Recientes y Narrativa</h3>
-  <p>En las últimas 6 horas (Sesión Asiática, 6 de marzo de 2026), el mercado ha operado bajo una narrativa de <strong>"Aversión al Riesgo Geopolítico"</strong>. Los titulares de Bloomberg y Reuters confirman la escalada del conflicto en el Medio Oriente (enfrentamiento EE. UU.-Irán), lo que ha disparado el petróleo WTI por encima de los $80, un máximo de 19 meses. Esta situación castiga doblemente al Euro: primero, por la dependencia energética de la Eurozona; segundo, por el estatus del USD como refugio seguro (Safe Haven).</p>
-  <ul>
-    <li><strong>Validación de Datos:</strong> El índice <strong>VIX</strong> ha saltado a <strong>23.76 (+12.39%)</strong>, confirmando un régimen de alta volatilidad.</li>
-    <li><strong>Calendario Inmediato:</strong> El mercado se encuentra en modo "espera" ante la publicación de las <strong>Nóminas No Agrícolas (NFP)</strong> de EE. UU. a las 13:30 GMT. Los datos previos de ADP sugirieron debilidad, pero el mercado ignora el "soft data" priorizando la inflación por costes de energía.</li>
-    <li><strong>Contexto Eurozona:</strong> El PIB del Q4 y los datos de empleo de la Eurozona se publicarán en breve (10:00 GMT), pero el sentimiento ya es bajista tras el cierre formal del Estrecho de Ormuz.</li>
-  </ul>
-  
-  <h3>3. Conclusión Causal Rigurosa</h3>
-  <p>La debilidad actual del EUR/USD (cotizando cerca de 1.1620) no es una anomalía técnica, sino una respuesta racional a tres fuerzas convergentes: <strong>1) Ampliación del spread de tasas</strong> por expectativas de una Fed más restrictiva ante el rebote inflacionario del crudo; <strong>2) Deterioro del sentimiento de riesgo</strong> (S&P 500 futures -0.60%) que activa compras de cobertura en USD; y <strong>3) Vulnerabilidad estructural de la Eurozona</strong> ante el shock de oferta energética. El precio está "anclado" por el diferencial de bonos, y cualquier intento de recuperación antes del NFP carece de soporte fundamental sólido.</p>
-  <p><strong>DIAGNÓSTICO:</strong> Dominancia del Dólar por divergencia de resiliencia económica y flujo de refugio. El EUR/USD presenta un sesgo bajista estructural mientras el spread de bonos se mantenga por encima de los 125 bps y el petróleo continúe su rally parabólico.</p>
-</div>
-            </div>
-        </div>
-        <!-- MR_REPORT_CARD_END -->
-<!-- MR_REPORT_CARD_START -->
-        <div class="report-card">
-            <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 02:08 UTC</div>
-            <div class="content">
-                <div class="report-section">
-  <h3>1. Estado del Conductor (Bonos)</h3>
-  <p>Al cierre de la sesión del 5 de marzo de 2026, el diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.14%)</strong> y el <strong>German Bund 10Y (2.84%)</strong> se sitúa en <strong>130 puntos básicos (bps)</strong>. Se observa una <strong>ANOMALÍA ESTRUCTURAL</strong>: mientras que el rendimiento del Bund alemán subió +9 bps en la última jornada frente a los +4 bps del Treasury estadounidense, el EUR/USD no ha capitalizado este estrechamiento del spread.</p>
-  <ul>
-    <li><strong>US 10Y Yield:</strong> 4.14% (Presión alcista por datos macro sólidos en EE.UU.).</li>
-    <li><strong>Germany 10Y Yield:</strong> 2.84% (Repunte por inflación persistente en la Eurozona, 2.6% headline).</li>
-    <li><strong>Divergencia:</strong> El estrechamiento del spread debería favorecer al Euro, pero la acción del precio es bajista, lo que indica que el flujo de capital no está siendo dirigido por tipos de interés, sino por <strong>aversión al riesgo</strong>.</li>
-  </ul>
+            <!-- MR_REPORT_CARD_START -->
+            <div class="report-card">
+                <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 16:42 UTC</div>
+                <div class="content">
+                    <div class="report-section">
+                        <h3>1. Estado del Conductor (Bonos)</h3>
+                        <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.100%)</strong> y
+                            el <strong>German Bund 10Y (2.746%)</strong> se sitúa actualmente en <strong>-135.4
+                                bps</strong>. A pesar de la debilidad en los datos de empleo publicados hoy, los
+                            rendimientos estadounidenses mantienen una resiliencia estructural. La dirección del flujo
+                            de capital favorece al dólar, no por una divergencia de política monetaria agresiva, sino
+                            por la prima de riesgo geopolítico que mantiene los bonos del Tesoro como el activo de
+                            refugio primario frente a la deuda europea.</p>
 
-  <h3>2. Datos Recientes y Narrativa</h3>
-  <p>La narrativa del mercado en las últimas 6-12 horas está dominada por el <strong>escalamiento geopolítico en el Medio Oriente</strong>. Informes confirmados de un incidente naval mayor entre EE.UU. e Irán cerca de Sri Lanka han disparado la demanda de activos refugio.</p>
-  <ul>
-    <li><strong>Validación de Datos (Últimas 24h):</strong> El VIX ha repuntado hasta <strong>21.15</strong>, reflejando un incremento del miedo sistémico. El S&P 500 futures cotiza a la baja (-0.61%), situándose en los 6,834 puntos.</li>
-    <li><strong>Narrativa de Mercado:</strong> Bloomberg y Reuters reportan que el cierre parcial del Estrecho de Ormuz está forzando una reevaluación de las primas de riesgo inflacionario. El USD está actuando como el <strong>único refugio global</strong>, ignorando la debilidad relativa de sus bonos frente a los europeos.</li>
-    <li><strong>Hard Data vs Narrative:</strong> Aunque el IPC de la Eurozona (2.6%) sugiere que el BCE mantendrá tipos altos por más tiempo, la narrativa de "Guerra y Energía" pesa más en el sentimiento que el diferencial de tasas.</li>
-  </ul>
+                        <h3>2. Datos Recientes y Narrativa</h3>
+                        <ul>
+                            <li><strong>Validación Macro (13:30 UTC):</strong> El reporte de <strong>Nóminas No
+                                    Agrícolas (NFP)</strong> de febrero mostró una pérdida inesperada de <strong>92,000
+                                    empleos</strong>, un dato que en condiciones normales de mercado habría provocado
+                                una venta masiva de USD.</li>
+                            <li><strong>Narrativa Dominante:</strong> El mercado ignora el "Hard Data" laboral debido a
+                                la escalada del conflicto en Oriente Medio (Guerra de Irán, día 7). El petróleo ha
+                                subido un <strong>6%</strong> en las últimas horas, alimentando expectativas de
+                                inflación por costes y forzando una demanda de "Safe-Haven".</li>
+                            <li><strong>Sentimiento de Riesgo:</strong> El <strong>VIX</strong> ha repuntado un
+                                <strong>+4.99%</strong> situándose en 24.12, mientras que los futuros del <strong>S&P
+                                    500</strong> caen un <strong>-0.96%</strong>. Esta aversión al riesgo está
+                                neutralizando el impacto bajista del NFP sobre el dólar.
+                            </li>
+                        </ul>
 
-  <h3>3. Conclusión Causal Rigurosa</h3>
-  <p>La caída del EUR/USD hacia el nivel de <strong>1.1600</strong> no responde a fundamentos monetarios tradicionales, sino a una <strong>dominancia de flujos de refugio (Safe Haven)</strong>. La correlación con el VIX es actualmente el conductor primario, desplazando al spread de bonos a un segundo plano.</p>
-  <p><strong>DIAGNÓSTICO:</strong> <strong>Divergencia por Riesgo Geopolítico.</strong> El fortalecimiento del USD es puramente defensivo. La presión de venta en el EUR/USD persistirá mientras el VIX se mantenga por encima de 20 y los futuros de renta variable sigan bajo presión, independientemente de si los rendimientos alemanes continúan subiendo más rápido que los estadounidenses.</p>
-</div>
+                        <h3>3. Conclusión Causal Rigurosa</h3>
+                        <p><strong>DIAGNÓSTICO:</strong> Se observa una <strong>Divergencia Crítica</strong> entre el
+                            valor fundamental del dólar (debilitado por el pésimo NFP) y su precio de mercado
+                            (fortalecido por flujos de refugio). La causalidad actual del EUR/USD en 1.1600 no responde
+                            a la salud económica de EE.UU., sino a la <strong>fractura del sentimiento de riesgo
+                                global</strong>. El euro actúa como moneda de financiación o activo de riesgo, siendo
+                            castigado por la proximidad geográfica y energética al conflicto, mientras que el USD
+                            captura la liquidez global que huye de la renta variable. El "Current State of Truth" es un
+                            mercado dominado por la geopolítica donde el dato macro es secundario frente a la seguridad
+                            del capital.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- MR_REPORT_CARD_END -->
-<!-- MR_REPORT_CARD_START -->
-        <div class="report-card">
-            <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 20:38 UTC</div>
-            <div class="content">
-                <div class="report-section">
-  <h3>1. Estado del Conductor (Bonos)</h3>
-  <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.15%)</strong> y el <strong>German Bund 10Y (2.85%)</strong> se sitúa actualmente en <strong>130 puntos básicos (bps)</strong>. En las últimas 24 horas, se observa una <strong>compresión del spread</strong>, ya que el rendimiento del Bund ha subido con mayor agresividad (+11 bps) frente al Treasury (+4 bps). Bajo condiciones normales, esta dinámica debería fortalecer al Euro; sin embargo, el EUR/USD cotiza a la baja cerca de <strong>1.1570</strong>. Esta <strong>divergencia negativa</strong> confirma que el precio no está siendo dictado por el diferencial de tasas, sino por una prima de riesgo geopolítico masiva que favorece al Dólar como activo de refugio.</p>
-  
-  <h3>2. Datos Recientes y Narrativa</h3>
-  <p>La narrativa del mercado está dominada por una escalada crítica en el conflicto de Oriente Medio. Informes de las últimas 6 horas confirman el hundimiento de un buque de guerra iraní y el cierre del <strong>Estrecho de Ormuz</strong>, lo que ha disparado el petróleo WTI por encima de los $79. Los datos macroeconómicos de EE. UU. publicados hoy (<strong>Jobless Claims</strong> estables y <strong>Costes Laborales</strong> al alza) refuerzan la postura de la Fed de mantener tasas elevadas ("higher for longer") para combatir la inflación importada por la energía. Mientras tanto, el <strong>VIX</strong> ha saltado un 18% hasta los <strong>25.04 puntos</strong>, señalando un régimen de pánico (Risk-Off) que invalida los fundamentales de crecimiento relativo de la Eurozona.</p>
-  
-  <h3>3. Conclusión Causal Rigurosa</h3>
-  <p><strong>DIAGNÓSTICO:</strong> La caída del EUR/USD hacia 1.1570 es una respuesta directa a la <strong>fuga hacia la calidad (Safe Haven Flow)</strong>. La causalidad es puramente estructural: el colapso del apetito por el riesgo (S&P 500 -1.29%) y la explosión de la volatilidad (VIX > 25) han forzado una liquidación de posiciones en EUR a pesar de que los bonos alemanes ofrecen ahora mejores retornos relativos. El mercado está priorizando la liquidez en USD ante la amenaza de un shock energético global y una espiral inflacionaria derivada del conflicto en Irán. El "Estado de Verdad" actual es un mercado movido por el miedo, no por el arbitraje de tasas.</p>
-</div>
+            <!-- MR_REPORT_CARD_END -->
+            <!-- MR_REPORT_CARD_START -->
+            <div class="report-card">
+                <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 12:58 UTC</div>
+                <div class="content">
+                    <div class="report-section">
+                        <h3>1. Estado del Conductor (Bonos)</h3>
+                        <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.17%)</strong> y
+                            el <strong>German Bund 10Y (2.86%)</strong> se sitúa actualmente en <strong>131 puntos
+                                básicos (bps)</strong>. Se observa una ampliación del spread a favor del dólar,
+                            impulsada por un incremento de +3 bps en la nota estadounidense frente a un avance marginal
+                            de +1 bps en el bono alemán durante la sesión europea. Esta divergencia refleja una mayor
+                            prima de riesgo inflacionario en EE. UU., exacerbada por el repunte en los precios de la
+                            energía, lo que ejerce una presión bajista mecánica y fundamental sobre el EUR/USD,
+                            manteniéndolo por debajo del nivel psicológico de 1.1600.</p>
+
+                        <h3>2. Datos Recientes y Narrativa</h3>
+                        <p>La narrativa del mercado está dominada por una <strong>"Triple Convergencia de
+                                Riesgo"</strong> validada en las últimas 6 horas:</p>
+                        <ul>
+                            <li><strong>Geopolítica (Alta Relevancia):</strong> La escalada del conflicto entre EE. UU.
+                                e Irán tras incidentes navales ha disparado el precio del crudo, alimentando temores de
+                                una espiral inflacionaria global que beneficia al USD como activo de refugio y moneda de
+                                "petro-protección".</li>
+                            <li><strong>Calendario Macro (Catalizador Inmediato):</strong> El mercado se encuentra en
+                                modo de espera cautelosa ante la publicación de las <strong>Nóminas No Agrícolas
+                                    (NFP)</strong> de EE. UU. hoy. La resiliencia del mercado laboral estadounidense
+                                (con desempleo previo en 4.3%) respalda la tesis de "tasas altas por más tiempo" de la
+                                Fed.</li>
+                            <li><strong>Sentimiento de Riesgo:</strong> Los futuros del S&P 500 operan con pérdidas del
+                                <strong>-0.96%</strong>, mientras que el VIX muestra una presión ascendente. Esta
+                                aversión al riesgo (Risk-Off) está forzando la liquidación de posiciones largas en EUR
+                                para cubrir flujos hacia el Tesoro de EE. UU.
+                            </li>
+                        </ul>
+
+                        <h3>3. Conclusión Causal Rigurosa</h3>
+                        <p><strong>DIAGNÓSTICO:</strong> La debilidad actual del EUR/USD (cotizando cerca de 1.1582) no
+                            es producto de una debilidad intrínseca del Euro, sino de una <strong>dominancia absoluta
+                                del Dólar por flujo de refugio y arbitraje de tasas</strong>. La causalidad es directa:
+                            el aumento del riesgo geopolítico eleva las expectativas de inflación vía energía, lo que
+                            obliga a los mercados a descontar menos recortes de la Fed en comparación con el BCE. El
+                            precio está "atrapado" en una estructura bajista de corto plazo hasta que el dato de NFP
+                            confirme o desmienta la capacidad de la economía estadounidense para absorber el shock
+                            energético actual.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- MR_REPORT_CARD_END -->
-<!-- MR_REPORT_CARD_START -->
-        <div class="report-card">
-            <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 18:05 UTC</div>
-            <div class="content">
-                <div class="report-section">
-  <h3>1. Estado del Conductor (Bonos)</h3>
-  <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.13%)</strong> y el <strong>German 10Y Bund (2.81%)</strong> se sitúa actualmente en <strong>132 puntos básicos (bps)</strong>. En las últimas 24 horas, ambos rendimientos han experimentado una presión alcista significativa: el T-Note subió 3 bps mientras que el Bund escaló 7 bps. A pesar de que el spread se estrechó marginalmente, el EUR/USD no ha logrado capitalizar este movimiento. Esta anomalía indica que la causalidad del precio se ha desplazado de los diferenciales de tasas de interés hacia la <strong>prima de riesgo geopolítico</strong>, donde el USD mantiene su estatus de refugio dominante a pesar de rendimientos relativos menos agresivos en el margen.</p>
-  
-  <h3>2. Datos Recientes y Narrativa</h3>
-  <p>La narrativa del mercado está monopolizada por la <strong>escalada bélica entre EE.UU. e Irán</strong>, que hoy entra en su sexto día de conflicto abierto. <strong>Validación de datos (Últimas 6 horas):</strong> El par EUR/USD ha caído con fuerza hasta los <strong>1.1587</strong> (-0.40%), marcando mínimos no vistos desde enero de 2026. El catalizador inmediato ha sido el reporte del hundimiento de un buque de guerra iraní por parte de un submarino estadounidense, lo que ha disparado los temores de un cierre prolongado de rutas energéticas. Aunque los datos de inflación en la Eurozona (Core 2.4%) han elevado las apuestas de un alza de tasas del BCE al 40% para finales de año, esta "fuerza fundamental" del Euro es neutralizada por el choque de oferta energética que penaliza la balanza comercial europea.</p>
-  
-  <h3>3. Conclusión Causal Rigurosa</h3>
-  <p><strong>DIAGNÓSTICO:</strong> La debilidad actual del EUR/USD es el resultado de una <strong>fuga hacia la calidad (Flight-to-Quality)</strong> masiva hacia el dólar estadounidense. La causalidad es estrictamente geopolítica y energética: el mercado está descontando un escenario de estanflación para Europa debido a su dependencia del crudo y gas, cuya logística está comprometida por el conflicto en el Medio Oriente. La ruptura del soporte de 1.1600 confirma que los flujos de posicionamiento están priorizando la liquidez en USD por encima de la convergencia de rendimientos de bonos soberanos. No hay divergencia; hay una re-jerarquización de riesgos donde la seguridad supera al carry.</p>
-</div>
+            <!-- MR_REPORT_CARD_END -->
+            <!-- MR_REPORT_CARD_START -->
+            <div class="report-card">
+                <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 08:39 UTC</div>
+                <div class="content">
+                    <div class="report-section">
+                        <h3>1. Estado del Conductor (Bonos)</h3>
+                        <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.14%)</strong> y
+                            el <strong>German 10Y Bund (2.85%)</strong> se sitúa actualmente en <strong>129 puntos
+                                básicos (bps)</strong>. Aunque los rendimientos del Bund alemán experimentaron un
+                            repunte reciente de +11 bps debido a los riesgos inflacionarios derivados del conflicto en
+                            Oriente Medio, el Tesoro de EE. UU. mantiene una ventaja estructural de carry significativa.
+                            La estabilidad del yield estadounidense en 4.14% en las últimas 24 horas, frente a la
+                            volatilidad europea, confirma que el flujo de capital sigue favoreciendo al dólar por
+                            diferencial de tasas reales.</p>
+
+                        <h3>2. Datos Recientes y Narrativa</h3>
+                        <p>La narrativa del mercado en las últimas 6 horas está dominada por una <strong>escalada
+                                geopolítica crítica</strong>. Informes sobre tensiones directas entre EE. UU. e Irán
+                            (incluyendo el hundimiento de un buque iraní y la evacuación de personal en Qatar) han
+                            activado un modo de "Safe-Haven" (refugio seguro).
+                        <ul>
+                            <li><strong>Riesgo (Mood):</strong> El índice <strong>VIX</strong> ha saltado a
+                                <strong>22.88</strong>, reflejando un aumento sustancial en el miedo del mercado. Los
+                                futuros del <strong>S&P 500</strong> caen un <strong>-0.96%</strong>.
+                            </li>
+                            <li><strong>Calendario (Catalizador):</strong> El mercado se encuentra en parálisis táctica
+                                a la espera del <strong>Non-Farm Payrolls (NFP)</strong> que se publicará hoy. Los datos
+                                de empleo de EE. UU. determinarán si la fortaleza del USD es puramente geopolítica o si
+                                está respaldada por una economía que no permite recortes de la Fed.</li>
+                            <li><strong>Validación:</strong> El par EUR/USD muestra debilidad técnica, presionando el
+                                nivel de <strong>1.1600</strong>, impulsado por la liquidación de activos de riesgo.
+                            </li>
+                        </ul>
+                        </p>
+
+                        <h3>3. Conclusión Causal Rigurosa</h3>
+                        <p><strong>DIAGNÓSTICO:</strong> La caída del EUR/USD hacia 1.1600 no es una respuesta a datos
+                            macroeconómicos europeos, sino una <strong>fuga hacia la calidad (Flight to
+                                Quality)</strong> provocada por el conflicto en Oriente Medio. La causalidad es doble:
+                            primero, el <strong>vuelo al dólar como refugio</strong> ante el desplome de la renta
+                            variable (S&P 500 -0.96%); segundo, la <strong>resiliencia de los yields de EE. UU.</strong>
+                            que, a pesar del riesgo, no caen debido a la expectativa de un NFP sólido y una inflación
+                            persistente. El EUR actúa como "proxy" de riesgo y sufre por la proximidad geográfica y
+                            energética al conflicto, invalidando cualquier intento de recuperación basado en
+                            fundamentales locales.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- MR_REPORT_CARD_END -->
-<!-- MR_REPORT_CARD_START -->
-        <div class="report-card">
-            <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 13:03 UTC</div>
-            <div class="content">
-                <div class="report-section">
-  <h3>1. Estado del Conductor (Bonos)</h3>
-  <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.13%)</strong> y el <strong>German Bund 10Y (~2.75%)</strong> se sitúa actualmente en los <strong>138 puntos básicos (bps)</strong>. Esta amplitud del spread a favor del dólar estadounidense actúa como un ancla gravitacional para el EUR/USD, limitando cualquier intento de recuperación sostenida. La estabilidad de los bonos estadounidenses en niveles superiores al 4.10%, a pesar de datos de empleo mixtos, confirma que el mercado está priorizando la prima por riesgo geopolítico y la expectativa de una política monetaria más restrictiva bajo la nueva dirección de la Reserva Federal.</p>
-  
-  <h3>2. Datos Recientes y Narrativa</h3>
-  <p>La narrativa del mercado en las últimas 6-12 horas está dominada por tres catalizadores críticos:</p>
-  <ul>
-    <li><strong>Geopolítica (Impacto Inmediato):</strong> La escalada de tensiones en Irán, con informes de ataques de represalia y la evacuación de personal estadounidense en Qatar, ha disparado la aversión al riesgo. Esto se refleja en la caída de los futuros del <strong>S&P 500 (-0.96%)</strong>, forzando flujos de "Safe Haven" hacia el USD.</li>
-    <li><strong>Transición en la Fed:</strong> La nominación oficial de <strong>Kevin Warsh</strong> para suceder a Jerome Powell ha introducido un sesgo "hawkish" (agresivo) en las expectativas de largo plazo. El mercado interpreta este movimiento como una señal de que las tasas se mantendrán elevadas por más tiempo para combatir la persistencia inflacionaria.</li>
-    <li><strong>Hard Data (Validación):</strong> El dato de <strong>ADP de febrero (63,000 empleos)</strong> resultó significativamente inferior a lo esperado. Sin embargo, su impacto bajista en el dólar ha sido neutralizado por la debilidad del crecimiento en China (objetivo de 4.5%-5%, el más bajo registrado), lo que castiga al Euro por su exposición comercial.</li>
-  </ul>
-  
-  <h3>3. Conclusión Causal Rigurosa</h3>
-  <p>La debilidad actual del EUR/USD no es producto de una debilidad intrínseca del Euro, sino de una <strong>confluencia de flujos defensivos</strong>. La divergencia entre un dato de empleo débil (ADP) y un dólar fuerte se explica por la dominancia de la narrativa geopolítica y el "re-pricing" de la Fed tras la nominación de Warsh. El mercado está ignorando los fallos en los datos macro de segundo orden para refugiarse en la liquidez del dólar ante la inestabilidad en Oriente Medio.</p>
-  <p><strong>DIAGNÓSTICO:</strong> <strong>Dominancia de Refugio y Diferencial de Tasas.</strong> El par EUR/USD se encuentra en un régimen de "Risk-Off" donde el spread de bonos de 138 bps y la incertidumbre bélica invalidan cualquier soporte técnico de corto plazo. La correlación negativa con el VIX (en ascenso) es el principal motor de la acción del precio en este momento.</p>
-</div>
+            <!-- MR_REPORT_CARD_END -->
+            <!-- MR_REPORT_CARD_START -->
+            <div class="report-card">
+                <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 05:10 UTC</div>
+                <div class="content">
+                    <div class="report-section">
+                        <h3>1. Estado del Conductor (Bonos)</h3>
+                        <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.14%)</strong> y
+                            el <strong>German Bund 10Y (2.85%)</strong> se sitúa actualmente en <strong>129 puntos
+                                básicos (bps)</strong> a favor del dólar estadounidense. Este spread se ha ampliado en
+                            las últimas 48 horas debido a un repunte en los rendimientos de EE. UU., impulsado por el
+                            temor inflacionario derivado del shock en los precios de la energía. La correlación es
+                            directa: el flujo de capital está abandonando la renta fija europea en favor de la seguridad
+                            y el mayor carry del Tesoro americano, ejerciendo una presión gravitacional sobre el EUR/USD
+                            hacia el nivel de 1.1600.</p>
+
+                        <h3>2. Datos Recientes y Narrativa</h3>
+                        <p>En las últimas 6 horas (Sesión Asiática, 6 de marzo de 2026), el mercado ha operado bajo una
+                            narrativa de <strong>"Aversión al Riesgo Geopolítico"</strong>. Los titulares de Bloomberg y
+                            Reuters confirman la escalada del conflicto en el Medio Oriente (enfrentamiento EE.
+                            UU.-Irán), lo que ha disparado el petróleo WTI por encima de los $80, un máximo de 19 meses.
+                            Esta situación castiga doblemente al Euro: primero, por la dependencia energética de la
+                            Eurozona; segundo, por el estatus del USD como refugio seguro (Safe Haven).</p>
+                        <ul>
+                            <li><strong>Validación de Datos:</strong> El índice <strong>VIX</strong> ha saltado a
+                                <strong>23.76 (+12.39%)</strong>, confirmando un régimen de alta volatilidad.
+                            </li>
+                            <li><strong>Calendario Inmediato:</strong> El mercado se encuentra en modo "espera" ante la
+                                publicación de las <strong>Nóminas No Agrícolas (NFP)</strong> de EE. UU. a las 13:30
+                                GMT. Los datos previos de ADP sugirieron debilidad, pero el mercado ignora el "soft
+                                data" priorizando la inflación por costes de energía.</li>
+                            <li><strong>Contexto Eurozona:</strong> El PIB del Q4 y los datos de empleo de la Eurozona
+                                se publicarán en breve (10:00 GMT), pero el sentimiento ya es bajista tras el cierre
+                                formal del Estrecho de Ormuz.</li>
+                        </ul>
+
+                        <h3>3. Conclusión Causal Rigurosa</h3>
+                        <p>La debilidad actual del EUR/USD (cotizando cerca de 1.1620) no es una anomalía técnica, sino
+                            una respuesta racional a tres fuerzas convergentes: <strong>1) Ampliación del spread de
+                                tasas</strong> por expectativas de una Fed más restrictiva ante el rebote inflacionario
+                            del crudo; <strong>2) Deterioro del sentimiento de riesgo</strong> (S&P 500 futures -0.60%)
+                            que activa compras de cobertura en USD; y <strong>3) Vulnerabilidad estructural de la
+                                Eurozona</strong> ante el shock de oferta energética. El precio está "anclado" por el
+                            diferencial de bonos, y cualquier intento de recuperación antes del NFP carece de soporte
+                            fundamental sólido.</p>
+                        <p><strong>DIAGNÓSTICO:</strong> Dominancia del Dólar por divergencia de resiliencia económica y
+                            flujo de refugio. El EUR/USD presenta un sesgo bajista estructural mientras el spread de
+                            bonos se mantenga por encima de los 125 bps y el petróleo continúe su rally parabólico.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- MR_REPORT_CARD_END -->
-<!-- MR_REPORT_CARD_START -->
-        <div class="report-card">
-            <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 08:43 UTC</div>
-            <div class="content">
-                <div class="report-section">
-  <h3>1. Estado del Conductor (Bonos)</h3>
-  <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.12%)</strong> y el <strong>German Bund 10Y (2.76%)</strong> se sitúa actualmente en <strong>136 puntos básicos</strong>. Se observa una presión bajista estructural sobre el EUR/USD debido a la divergencia en la trayectoria de los bonos: mientras el rendimiento estadounidense ha encadenado cuatro sesiones consecutivas al alza impulsado por datos de resiliencia económica (ISM Servicios 56.1), el Bund alemán muestra signos de estancamiento tras la estabilización de las expectativas de inflación en la Eurozona (1.9%).</p>
-  <p><strong>Divergencia Detectada:</strong> El par EUR/USD muestra un ligero rebote técnico hacia 1.1632, a pesar de que el spread de bonos continúa favoreciendo al dólar. Esta anomalía no responde a fundamentos de tasas, sino a un flujo de cobertura de posiciones cortas (short-covering) motivado por la narrativa geopolítica.</p>
-  
-  <h3>2. Datos Recientes y Narrativa</h3>
-  <p>La acción del precio en las últimas 6 horas ha sido dictada exclusivamente por la volatilidad geopolítica y la validación de la fortaleza macro en EE. UU.:</p>
-  <ul>
-    <li><strong>Validación Macro (Hard Data):</strong> El reporte <strong>ADP de empleo (63K vs 50K esperado)</strong> y el <strong>ISM de Servicios (56.1)</strong> publicados recientemente confirman que la economía estadounidense no requiere recortes de tipos inmediatos, desplazando las expectativas de flexibilización de la Fed hacia septiembre de 2026.</li>
-    <li><strong>Narrativa de Mercado (Headlines):</strong> El mercado procesa el hundimiento de un buque de guerra iraní por parte de EE. UU. cerca de Sri Lanka. Sin embargo, el EUR/USD ha recuperado terreno desde el mínimo de 1.1592 tras un reporte de <em>The New York Times</em> indicando que operativos iraníes habrían contactado a la CIA para negociar términos de desescalada.</li>
-    <li><strong>Sentimiento de Riesgo:</strong> El <strong>VIX</strong> ha retrocedido un 10% hasta los <strong>21.15 puntos</strong>, lo que indica una relajación momentánea del pánico, permitiendo que el S&P 500 (+0.78%) actúe como un soporte temporal para las divisas de riesgo frente al USD.</li>
-  </ul>
-  
-  <h3>3. Conclusión Causal Rigurosa</h3>
-  <p><strong>DIAGNÓSTICO:</strong> La cotización actual del EUR/USD en 1.1632 es el resultado de un <strong>equilibrio inestable</strong> entre dos fuerzas opuestas. Por un lado, la <strong>causalidad fundamental</strong> (spread de bonos y datos macro de EE. UU.) es agresivamente bajista para el euro. Por otro lado, la <strong>causalidad de flujo</strong> está dominada por una narrativa de "alivio geopolítico" que ha frenado el rally del dólar. El par permanece por debajo de su media móvil de 200 días (1.1671), lo que confirma que la estructura de mercado sigue siendo bajista; el movimiento alcista actual es una corrección por sentimiento, no un cambio de tendencia basado en el valor real del dinero.</p>
-</div>
+            <!-- MR_REPORT_CARD_END -->
+            <!-- MR_REPORT_CARD_START -->
+            <div class="report-card">
+                <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 02:08 UTC</div>
+                <div class="content">
+                    <div class="report-section">
+                        <h3>1. Estado del Conductor (Bonos)</h3>
+                        <p>Al cierre de la sesión del 5 de marzo de 2026, el diferencial de rendimientos (spread) entre
+                            el <strong>US 10Y Treasury (4.14%)</strong> y el <strong>German Bund 10Y (2.84%)</strong> se
+                            sitúa en <strong>130 puntos básicos (bps)</strong>. Se observa una <strong>ANOMALÍA
+                                ESTRUCTURAL</strong>: mientras que el rendimiento del Bund alemán subió +9 bps en la
+                            última jornada frente a los +4 bps del Treasury estadounidense, el EUR/USD no ha
+                            capitalizado este estrechamiento del spread.</p>
+                        <ul>
+                            <li><strong>US 10Y Yield:</strong> 4.14% (Presión alcista por datos macro sólidos en
+                                EE.UU.).</li>
+                            <li><strong>Germany 10Y Yield:</strong> 2.84% (Repunte por inflación persistente en la
+                                Eurozona, 2.6% headline).</li>
+                            <li><strong>Divergencia:</strong> El estrechamiento del spread debería favorecer al Euro,
+                                pero la acción del precio es bajista, lo que indica que el flujo de capital no está
+                                siendo dirigido por tipos de interés, sino por <strong>aversión al riesgo</strong>.</li>
+                        </ul>
+
+                        <h3>2. Datos Recientes y Narrativa</h3>
+                        <p>La narrativa del mercado en las últimas 6-12 horas está dominada por el <strong>escalamiento
+                                geopolítico en el Medio Oriente</strong>. Informes confirmados de un incidente naval
+                            mayor entre EE.UU. e Irán cerca de Sri Lanka han disparado la demanda de activos refugio.
+                        </p>
+                        <ul>
+                            <li><strong>Validación de Datos (Últimas 24h):</strong> El VIX ha repuntado hasta
+                                <strong>21.15</strong>, reflejando un incremento del miedo sistémico. El S&P 500 futures
+                                cotiza a la baja (-0.61%), situándose en los 6,834 puntos.
+                            </li>
+                            <li><strong>Narrativa de Mercado:</strong> Bloomberg y Reuters reportan que el cierre
+                                parcial del Estrecho de Ormuz está forzando una reevaluación de las primas de riesgo
+                                inflacionario. El USD está actuando como el <strong>único refugio global</strong>,
+                                ignorando la debilidad relativa de sus bonos frente a los europeos.</li>
+                            <li><strong>Hard Data vs Narrative:</strong> Aunque el IPC de la Eurozona (2.6%) sugiere que
+                                el BCE mantendrá tipos altos por más tiempo, la narrativa de "Guerra y Energía" pesa más
+                                en el sentimiento que el diferencial de tasas.</li>
+                        </ul>
+
+                        <h3>3. Conclusión Causal Rigurosa</h3>
+                        <p>La caída del EUR/USD hacia el nivel de <strong>1.1600</strong> no responde a fundamentos
+                            monetarios tradicionales, sino a una <strong>dominancia de flujos de refugio (Safe
+                                Haven)</strong>. La correlación con el VIX es actualmente el conductor primario,
+                            desplazando al spread de bonos a un segundo plano.</p>
+                        <p><strong>DIAGNÓSTICO:</strong> <strong>Divergencia por Riesgo Geopolítico.</strong> El
+                            fortalecimiento del USD es puramente defensivo. La presión de venta en el EUR/USD persistirá
+                            mientras el VIX se mantenga por encima de 20 y los futuros de renta variable sigan bajo
+                            presión, independientemente de si los rendimientos alemanes continúan subiendo más rápido
+                            que los estadounidenses.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- MR_REPORT_CARD_END -->
-<!-- MR_REPORT_CARD_START -->
-        <div class="report-card">
-            <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 05:13 UTC</div>
-            <div class="content">
-                <div class="report-section">
-  <h3>1. Estado del Conductor (Bonos)</h3>
-  <p>El diferencial de rendimiento (spread) entre el <strong>US 10Y Treasury (4.12%)</strong> y el <strong>German Bund 10Y (2.76%)</strong> se sitúa actualmente en <strong>136 puntos básicos (bps)</strong>. Este diferencial se ha ampliado en las últimas 24 horas debido a un repunte en los rendimientos estadounidenses, impulsado por el temor a una espiral inflacionaria global. La dirección del flujo es inequívoca: el capital está abandonando la deuda europea en favor de la seguridad y el mayor carry del Tesoro de EE. UU., lo que ejerce una presión mecánica bajista sobre el par EUR/USD.</p>
-  
-  <h3>2. Datos Recientes y Narrativa</h3>
-  <p><strong>Validación de Recencia (Últimas 6 horas):</strong> El mercado está procesando la escalada bélica directa entre Irán e Israel, con reportes de ataques en centros estratégicos de Teherán y Beirut. Esta narrativa de "Economía de Guerra" ha provocado un salto del 8% en los precios del petróleo WTI, lo que penaliza doblemente al Euro debido a la dependencia energética de la Eurozona. El <strong>VIX</strong> ha escalado hasta <strong>21.78</strong>, confirmando un régimen de <strong>Aversión al Riesgo (Risk-Off)</strong> extremo. Los futuros del <strong>S&P 500</strong> operan con caídas superiores al 2%, reforzando la demanda de USD como activo de reserva final.</p>
-  
-  <h3>3. Conclusión Causal Rigurosa</h3>
-  <p><strong>DIAGNÓSTICO:</strong> La cotización del EUR/USD en la zona de <strong>1.1600</strong> es el resultado directo de una <strong>convergencia de flujos de refugio y shock de oferta energético</strong>. No existe divergencia entre el precio y los fundamentales: la caída del par está perfectamente alineada con la ampliación del spread de bonos y el colapso del sentimiento de riesgo. La causalidad actual es <strong>Geopolítica-Inflacionaria</strong>; el mercado descuenta que la Fed mantendrá tasas restrictivas por más tiempo para combatir la inflación importada por el crudo, mientras que el crecimiento europeo se ve amenazado por los costes de energía, debilitando la posición relativa del Euro.</p>
-</div>
+            <!-- MR_REPORT_CARD_END -->
+            <!-- MR_REPORT_CARD_START -->
+            <div class="report-card">
+                <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 20:38 UTC</div>
+                <div class="content">
+                    <div class="report-section">
+                        <h3>1. Estado del Conductor (Bonos)</h3>
+                        <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.15%)</strong> y
+                            el <strong>German Bund 10Y (2.85%)</strong> se sitúa actualmente en <strong>130 puntos
+                                básicos (bps)</strong>. En las últimas 24 horas, se observa una <strong>compresión del
+                                spread</strong>, ya que el rendimiento del Bund ha subido con mayor agresividad (+11
+                            bps) frente al Treasury (+4 bps). Bajo condiciones normales, esta dinámica debería
+                            fortalecer al Euro; sin embargo, el EUR/USD cotiza a la baja cerca de
+                            <strong>1.1570</strong>. Esta <strong>divergencia negativa</strong> confirma que el precio
+                            no está siendo dictado por el diferencial de tasas, sino por una prima de riesgo geopolítico
+                            masiva que favorece al Dólar como activo de refugio.
+                        </p>
+
+                        <h3>2. Datos Recientes y Narrativa</h3>
+                        <p>La narrativa del mercado está dominada por una escalada crítica en el conflicto de Oriente
+                            Medio. Informes de las últimas 6 horas confirman el hundimiento de un buque de guerra iraní
+                            y el cierre del <strong>Estrecho de Ormuz</strong>, lo que ha disparado el petróleo WTI por
+                            encima de los $79. Los datos macroeconómicos de EE. UU. publicados hoy (<strong>Jobless
+                                Claims</strong> estables y <strong>Costes Laborales</strong> al alza) refuerzan la
+                            postura de la Fed de mantener tasas elevadas ("higher for longer") para combatir la
+                            inflación importada por la energía. Mientras tanto, el <strong>VIX</strong> ha saltado un
+                            18% hasta los <strong>25.04 puntos</strong>, señalando un régimen de pánico (Risk-Off) que
+                            invalida los fundamentales de crecimiento relativo de la Eurozona.</p>
+
+                        <h3>3. Conclusión Causal Rigurosa</h3>
+                        <p><strong>DIAGNÓSTICO:</strong> La caída del EUR/USD hacia 1.1570 es una respuesta directa a la
+                            <strong>fuga hacia la calidad (Safe Haven Flow)</strong>. La causalidad es puramente
+                            estructural: el colapso del apetito por el riesgo (S&P 500 -1.29%) y la explosión de la
+                            volatilidad (VIX > 25) han forzado una liquidación de posiciones en EUR a pesar de que los
+                            bonos alemanes ofrecen ahora mejores retornos relativos. El mercado está priorizando la
+                            liquidez en USD ante la amenaza de un shock energético global y una espiral inflacionaria
+                            derivada del conflicto en Irán. El "Estado de Verdad" actual es un mercado movido por el
+                            miedo, no por el arbitraje de tasas.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- MR_REPORT_CARD_END -->
+            <!-- MR_REPORT_CARD_END -->
+            <!-- MR_REPORT_CARD_START -->
+            <div class="report-card">
+                <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 18:05 UTC</div>
+                <div class="content">
+                    <div class="report-section">
+                        <h3>1. Estado del Conductor (Bonos)</h3>
+                        <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.13%)</strong> y
+                            el <strong>German 10Y Bund (2.81%)</strong> se sitúa actualmente en <strong>132 puntos
+                                básicos (bps)</strong>. En las últimas 24 horas, ambos rendimientos han experimentado
+                            una presión alcista significativa: el T-Note subió 3 bps mientras que el Bund escaló 7 bps.
+                            A pesar de que el spread se estrechó marginalmente, el EUR/USD no ha logrado capitalizar
+                            este movimiento. Esta anomalía indica que la causalidad del precio se ha desplazado de los
+                            diferenciales de tasas de interés hacia la <strong>prima de riesgo geopolítico</strong>,
+                            donde el USD mantiene su estatus de refugio dominante a pesar de rendimientos relativos
+                            menos agresivos en el margen.</p>
+
+                        <h3>2. Datos Recientes y Narrativa</h3>
+                        <p>La narrativa del mercado está monopolizada por la <strong>escalada bélica entre EE.UU. e
+                                Irán</strong>, que hoy entra en su sexto día de conflicto abierto. <strong>Validación de
+                                datos (Últimas 6 horas):</strong> El par EUR/USD ha caído con fuerza hasta los
+                            <strong>1.1587</strong> (-0.40%), marcando mínimos no vistos desde enero de 2026. El
+                            catalizador inmediato ha sido el reporte del hundimiento de un buque de guerra iraní por
+                            parte de un submarino estadounidense, lo que ha disparado los temores de un cierre
+                            prolongado de rutas energéticas. Aunque los datos de inflación en la Eurozona (Core 2.4%)
+                            han elevado las apuestas de un alza de tasas del BCE al 40% para finales de año, esta
+                            "fuerza fundamental" del Euro es neutralizada por el choque de oferta energética que
+                            penaliza la balanza comercial europea.
+                        </p>
+
+                        <h3>3. Conclusión Causal Rigurosa</h3>
+                        <p><strong>DIAGNÓSTICO:</strong> La debilidad actual del EUR/USD es el resultado de una
+                            <strong>fuga hacia la calidad (Flight-to-Quality)</strong> masiva hacia el dólar
+                            estadounidense. La causalidad es estrictamente geopolítica y energética: el mercado está
+                            descontando un escenario de estanflación para Europa debido a su dependencia del crudo y
+                            gas, cuya logística está comprometida por el conflicto en el Medio Oriente. La ruptura del
+                            soporte de 1.1600 confirma que los flujos de posicionamiento están priorizando la liquidez
+                            en USD por encima de la convergencia de rendimientos de bonos soberanos. No hay divergencia;
+                            hay una re-jerarquización de riesgos donde la seguridad supera al carry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- MR_REPORT_CARD_END -->
+            <!-- MR_REPORT_CARD_START -->
+            <div class="report-card">
+                <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 13:03 UTC</div>
+                <div class="content">
+                    <div class="report-section">
+                        <h3>1. Estado del Conductor (Bonos)</h3>
+                        <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.13%)</strong> y
+                            el <strong>German Bund 10Y (~2.75%)</strong> se sitúa actualmente en los <strong>138 puntos
+                                básicos (bps)</strong>. Esta amplitud del spread a favor del dólar estadounidense actúa
+                            como un ancla gravitacional para el EUR/USD, limitando cualquier intento de recuperación
+                            sostenida. La estabilidad de los bonos estadounidenses en niveles superiores al 4.10%, a
+                            pesar de datos de empleo mixtos, confirma que el mercado está priorizando la prima por
+                            riesgo geopolítico y la expectativa de una política monetaria más restrictiva bajo la nueva
+                            dirección de la Reserva Federal.</p>
+
+                        <h3>2. Datos Recientes y Narrativa</h3>
+                        <p>La narrativa del mercado en las últimas 6-12 horas está dominada por tres catalizadores
+                            críticos:</p>
+                        <ul>
+                            <li><strong>Geopolítica (Impacto Inmediato):</strong> La escalada de tensiones en Irán, con
+                                informes de ataques de represalia y la evacuación de personal estadounidense en Qatar,
+                                ha disparado la aversión al riesgo. Esto se refleja en la caída de los futuros del
+                                <strong>S&P 500 (-0.96%)</strong>, forzando flujos de "Safe Haven" hacia el USD.
+                            </li>
+                            <li><strong>Transición en la Fed:</strong> La nominación oficial de <strong>Kevin
+                                    Warsh</strong> para suceder a Jerome Powell ha introducido un sesgo "hawkish"
+                                (agresivo) en las expectativas de largo plazo. El mercado interpreta este movimiento
+                                como una señal de que las tasas se mantendrán elevadas por más tiempo para combatir la
+                                persistencia inflacionaria.</li>
+                            <li><strong>Hard Data (Validación):</strong> El dato de <strong>ADP de febrero (63,000
+                                    empleos)</strong> resultó significativamente inferior a lo esperado. Sin embargo, su
+                                impacto bajista en el dólar ha sido neutralizado por la debilidad del crecimiento en
+                                China (objetivo de 4.5%-5%, el más bajo registrado), lo que castiga al Euro por su
+                                exposición comercial.</li>
+                        </ul>
+
+                        <h3>3. Conclusión Causal Rigurosa</h3>
+                        <p>La debilidad actual del EUR/USD no es producto de una debilidad intrínseca del Euro, sino de
+                            una <strong>confluencia de flujos defensivos</strong>. La divergencia entre un dato de
+                            empleo débil (ADP) y un dólar fuerte se explica por la dominancia de la narrativa
+                            geopolítica y el "re-pricing" de la Fed tras la nominación de Warsh. El mercado está
+                            ignorando los fallos en los datos macro de segundo orden para refugiarse en la liquidez del
+                            dólar ante la inestabilidad en Oriente Medio.</p>
+                        <p><strong>DIAGNÓSTICO:</strong> <strong>Dominancia de Refugio y Diferencial de Tasas.</strong>
+                            El par EUR/USD se encuentra en un régimen de "Risk-Off" donde el spread de bonos de 138 bps
+                            y la incertidumbre bélica invalidan cualquier soporte técnico de corto plazo. La correlación
+                            negativa con el VIX (en ascenso) es el principal motor de la acción del precio en este
+                            momento.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- MR_REPORT_CARD_END -->
+            <!-- MR_REPORT_CARD_START -->
+            <div class="report-card">
+                <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 08:43 UTC</div>
+                <div class="content">
+                    <div class="report-section">
+                        <h3>1. Estado del Conductor (Bonos)</h3>
+                        <p>El diferencial de rendimientos (spread) entre el <strong>US 10Y Treasury (4.12%)</strong> y
+                            el <strong>German Bund 10Y (2.76%)</strong> se sitúa actualmente en <strong>136 puntos
+                                básicos</strong>. Se observa una presión bajista estructural sobre el EUR/USD debido a
+                            la divergencia en la trayectoria de los bonos: mientras el rendimiento estadounidense ha
+                            encadenado cuatro sesiones consecutivas al alza impulsado por datos de resiliencia económica
+                            (ISM Servicios 56.1), el Bund alemán muestra signos de estancamiento tras la estabilización
+                            de las expectativas de inflación en la Eurozona (1.9%).</p>
+                        <p><strong>Divergencia Detectada:</strong> El par EUR/USD muestra un ligero rebote técnico hacia
+                            1.1632, a pesar de que el spread de bonos continúa favoreciendo al dólar. Esta anomalía no
+                            responde a fundamentos de tasas, sino a un flujo de cobertura de posiciones cortas
+                            (short-covering) motivado por la narrativa geopolítica.</p>
+
+                        <h3>2. Datos Recientes y Narrativa</h3>
+                        <p>La acción del precio en las últimas 6 horas ha sido dictada exclusivamente por la volatilidad
+                            geopolítica y la validación de la fortaleza macro en EE. UU.:</p>
+                        <ul>
+                            <li><strong>Validación Macro (Hard Data):</strong> El reporte <strong>ADP de empleo (63K vs
+                                    50K esperado)</strong> y el <strong>ISM de Servicios (56.1)</strong> publicados
+                                recientemente confirman que la economía estadounidense no requiere recortes de tipos
+                                inmediatos, desplazando las expectativas de flexibilización de la Fed hacia septiembre
+                                de 2026.</li>
+                            <li><strong>Narrativa de Mercado (Headlines):</strong> El mercado procesa el hundimiento de
+                                un buque de guerra iraní por parte de EE. UU. cerca de Sri Lanka. Sin embargo, el
+                                EUR/USD ha recuperado terreno desde el mínimo de 1.1592 tras un reporte de <em>The New
+                                    York Times</em> indicando que operativos iraníes habrían contactado a la CIA para
+                                negociar términos de desescalada.</li>
+                            <li><strong>Sentimiento de Riesgo:</strong> El <strong>VIX</strong> ha retrocedido un 10%
+                                hasta los <strong>21.15 puntos</strong>, lo que indica una relajación momentánea del
+                                pánico, permitiendo que el S&P 500 (+0.78%) actúe como un soporte temporal para las
+                                divisas de riesgo frente al USD.</li>
+                        </ul>
+
+                        <h3>3. Conclusión Causal Rigurosa</h3>
+                        <p><strong>DIAGNÓSTICO:</strong> La cotización actual del EUR/USD en 1.1632 es el resultado de
+                            un <strong>equilibrio inestable</strong> entre dos fuerzas opuestas. Por un lado, la
+                            <strong>causalidad fundamental</strong> (spread de bonos y datos macro de EE. UU.) es
+                            agresivamente bajista para el euro. Por otro lado, la <strong>causalidad de flujo</strong>
+                            está dominada por una narrativa de "alivio geopolítico" que ha frenado el rally del dólar.
+                            El par permanece por debajo de su media móvil de 200 días (1.1671), lo que confirma que la
+                            estructura de mercado sigue siendo bajista; el movimiento alcista actual es una corrección
+                            por sentimiento, no un cambio de tendencia basado en el valor real del dinero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- MR_REPORT_CARD_END -->
+            <!-- MR_REPORT_CARD_START -->
+            <div class="report-card">
+                <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 05:13 UTC</div>
+                <div class="content">
+                    <div class="report-section">
+                        <h3>1. Estado del Conductor (Bonos)</h3>
+                        <p>El diferencial de rendimiento (spread) entre el <strong>US 10Y Treasury (4.12%)</strong> y el
+                            <strong>German Bund 10Y (2.76%)</strong> se sitúa actualmente en <strong>136 puntos básicos
+                                (bps)</strong>. Este diferencial se ha ampliado en las últimas 24 horas debido a un
+                            repunte en los rendimientos estadounidenses, impulsado por el temor a una espiral
+                            inflacionaria global. La dirección del flujo es inequívoca: el capital está abandonando la
+                            deuda europea en favor de la seguridad y el mayor carry del Tesoro de EE. UU., lo que ejerce
+                            una presión mecánica bajista sobre el par EUR/USD.
+                        </p>
+
+                        <h3>2. Datos Recientes y Narrativa</h3>
+                        <p><strong>Validación de Recencia (Últimas 6 horas):</strong> El mercado está procesando la
+                            escalada bélica directa entre Irán e Israel, con reportes de ataques en centros estratégicos
+                            de Teherán y Beirut. Esta narrativa de "Economía de Guerra" ha provocado un salto del 8% en
+                            los precios del petróleo WTI, lo que penaliza doblemente al Euro debido a la dependencia
+                            energética de la Eurozona. El <strong>VIX</strong> ha escalado hasta <strong>21.78</strong>,
+                            confirmando un régimen de <strong>Aversión al Riesgo (Risk-Off)</strong> extremo. Los
+                            futuros del <strong>S&P 500</strong> operan con caídas superiores al 2%, reforzando la
+                            demanda de USD como activo de reserva final.</p>
+
+                        <h3>3. Conclusión Causal Rigurosa</h3>
+                        <p><strong>DIAGNÓSTICO:</strong> La cotización del EUR/USD en la zona de <strong>1.1600</strong>
+                            es el resultado directo de una <strong>convergencia de flujos de refugio y shock de oferta
+                                energético</strong>. No existe divergencia entre el precio y los fundamentales: la caída
+                            del par está perfectamente alineada con la ampliación del spread de bonos y el colapso del
+                            sentimiento de riesgo. La causalidad actual es <strong>Geopolítica-Inflacionaria</strong>;
+                            el mercado descuenta que la Fed mantendrá tasas restrictivas por más tiempo para combatir la
+                            inflación importada por el crudo, mientras que el crecimiento europeo se ve amenazado por
+                            los costes de energía, debilitando la posición relativa del Euro.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- MR_REPORT_CARD_END -->
             <!-- MR_REPORTS_END -->
         </div>
     </div>
+    <script>
+        function updateTimeAgo() {
+            const months = {
+                'JAN': '01', 'FEB': '02', 'MAR': '03', 'APR': '04', 'MAY': '05', 'JUN': '06',
+                'JUL': '07', 'AUG': '08', 'SEP': '09', 'OCT': '10', 'NOV': '11', 'DEC': '12'
+            };
+
+            function parseDateString(dateStr) {
+                // Ignore case in case CSS uppercase altered the text
+                let parts = dateStr.toUpperCase().match(/(\d{2})-([A-Z]{3})-(\d{4})\s+(\d{2}):(\d{2})\s+UTC/);
+                if (parts) {
+                    const isoStr = parts[3] + "-" + months[parts[2]] + "-" + parts[1] + "T" + parts[4] + ":" + parts[5] + ":00Z";
+                    return new Date(isoStr);
+                }
+                return null;
+            }
+
+            function timeAgo(date) {
+                if (!date || isNaN(date.getTime())) return "";
+
+                const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+                if (seconds < 60) return "hace menos de 1 minuto";
+
+                const intervals = [
+                    { label: 'año', seconds: 31536000, plural: 's' },
+                    { label: 'mes', seconds: 2592000, plural: 'es' },
+                    { label: 'día', seconds: 86400, plural: 's' },
+                    { label: 'hora', seconds: 3600, plural: 's' },
+                    { label: 'minuto', seconds: 60, plural: 's' }
+                ];
+
+                for (let i = 0; i < intervals.length; i++) {
+                    const interval = intervals[i];
+                    const count = Math.floor(seconds / interval.seconds);
+                    if (count >= 1) {
+                        return "hace " + count + " " + interval.label + (count === 1 ? "" : interval.plural);
+                    }
+                }
+                return "hace menos de 1 minuto";
+            }
+
+            document.querySelectorAll('.timestamp').forEach(function (ts) {
+                // Usamos textContent en lugar de innerText para evitar el text-transform: uppercase de CSS
+                if (!ts.dataset.original) {
+                    ts.dataset.original = ts.textContent.trim();
+                }
+
+                const text = ts.dataset.original;
+                // Buscamos ignorando case sensitiveness
+                const dateMatch = text.match(/REPORTE GENERADO:\s+(.*)/i);
+
+                if (dateMatch && dateMatch[1]) {
+                    const date = parseDateString(dateMatch[1]);
+                    if (date && !isNaN(date.getTime())) {
+                        const ago = timeAgo(date);
+                        ts.textContent = text + " (" + ago + ")";
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            updateTimeAgo();
+            setInterval(updateTimeAgo, 60000);
+        });
+    </script>
 </body>
+
 </html>
