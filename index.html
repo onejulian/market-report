@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +7,14 @@
     <title>EUR/USD Macro Monitor</title>
     <style>
         :root {
-            --bg-body: #0f172a;
-            /* Slate 900 */
-            --bg-card: #1e293b;
-            /* Slate 800 */
-            --text-main: #f1f5f9;
-            /* Slate 100 */
-            --text-muted: #94a3b8;
-            /* Slate 400 */
-            --border: #334155;
-            /* Slate 700 */
-            --accent: #38bdf8;
-            /* Sky 400 */
+            --bg-body: #0f172a;       /* Slate 900 */
+            --bg-card: #1e293b;       /* Slate 800 */
+            --text-main: #f1f5f9;     /* Slate 100 */
+            --text-muted: #94a3b8;    /* Slate 400 */
+            --border: #334155;        /* Slate 700 */
+            --accent: #38bdf8;        /* Sky 400 */
             --accent-glow: rgba(56, 189, 248, 0.15);
-            --success: #34d399;
-            /* Emerald 400 */
+            --success: #34d399;       /* Emerald 400 */
             --font-main: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
 
@@ -88,9 +80,7 @@
         .report-card::before {
             content: "";
             position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
+            left: 0; top: 0; bottom: 0;
             width: 4px;
             background: var(--accent);
             opacity: 0.8;
@@ -121,7 +111,7 @@
             display: flex;
             align-items: center;
         }
-
+        
         .content h3::before {
             content: "▹";
             margin-right: 8px;
@@ -134,57 +124,60 @@
         }
 
         .content strong {
-            color: var(--success);
-            /* Resalta datos clave en verde */
+            color: var(--success); /* Resalta datos clave en verde */
             font-weight: 600;
         }
-
+        
         /* Diagnóstico final destacado */
         .content p:last-child strong {
-            color: #fbbf24;
-            /* Amber para la conclusión */
+            color: #fbbf24; /* Amber para la conclusión */
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Mobile */
         @media (max-width: 600px) {
-            body {
-                padding: 12px;
-            }
-
-            .header h1 {
-                font-size: 1.5rem;
-            }
-
-            .report-card {
-                padding: 20px;
-                border-radius: 12px;
-            }
+            body { padding: 12px; }
+            .header h1 { font-size: 1.5rem; }
+            .report-card { padding: 20px; border-radius: 12px; }
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="header">
             <h1>EUR/USD Algorithmic Causality</h1>
             <p>Monitor de Estructura de Mercado & Flujos en Tiempo Real</p>
         </div>
-
+        
         <div id="archive">
             <!-- MR_REPORTS_START -->
-            <!-- MR_REPORT_CARD_START -->
+<!-- MR_REPORT_CARD_START -->
+        <div class="report-card">
+            <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 20:34 UTC</div>
+            <div class="content">
+                <div class="report-section">
+  <h3>1. Estado del Conductor (Bonos)</h3>
+  <p>El diferencial de rendimientos soberanos refleja una revalorización de la prima de riesgo inflacionario. El <strong>US 10Y Treasury</strong> cotiza en <strong>4.12%</strong> (retrocediendo desde máximos de 4.18% tras los datos laborales), mientras que el <strong>Germany 10Y Bund</strong> ha escalado al <strong>2.87%</strong> (máximo de varias semanas). El spread US-GER se comprime a ~125 bps. Estructuralmente, los rendimientos europeos están subiendo más rápido por el shock energético, lo que teóricamente debería apoyar al EUR. Sin embargo, la dirección del flujo de capital está dictada por la aversión al riesgo, no por el diferencial de tasas.</p>
+  
+  <h3>2. Datos Recientes y Narrativa</h3>
+  <ul>
+    <li><strong>Hard Data (Últimas 6 horas):</strong> Reporte NFP (Non-Farm Payrolls) de EE.UU. catastrófico. Destrucción de <strong>-92K empleos</strong> en febrero (vs. +59K esperado). Tasa de desempleo sube al 4.4% y ventas minoristas caen -0.2%.</li>
+    <li><strong>Estructura de Mercado:</strong> Futuros del S&P 500 (ES) cayendo ~0.5% (zona de 6800), con el índice VIX repuntando un 6% (superando el nivel de 23).</li>
+    <li><strong>Narrativa Institucional:</strong> Titulares de FXStreet e Investing.com confirman: <em>"EUR/USD retreats as safe-haven demand lifts US Dollar despite NFP shock"</em> y <em>"EUR/USD Breaks Rising Channel as Energy Prices Surge"</em>.</li>
+  </ul>
+  <p><strong>Contraste:</strong> Existe una desconexión absoluta entre los datos macroeconómicos y la acción del precio. Los "Hard Data" exigen debilidad del USD y recortes de la Fed, pero la narrativa está secuestrada por el pánico geopolítico (conflicto EE.UU./Israel vs. Irán) y el petróleo superando los $84/bbl por amenazas en el Estrecho de Ormuz.</p>
+  
+  <h3>3. Conclusión Causal Rigurosa</h3>
+  <p><strong>DIAGNÓSTICO: DIVERGENCIA ANÓMALA POR FLUJOS DE REFUGIO (RISK-OFF).</strong> El EUR/USD cotiza a la baja (zona de 1.1560) en directa contradicción con el colapso de los datos laborales de EE.UU. (NFP negativo) y la compresión del spread de bonos US-GER. Esta anomalía confirma que los fundamentales macroeconómicos han sido desplazados temporalmente por flujos de liquidez de pánico. El capital está liquidando activos de riesgo (caída del S&P 500, alza del VIX) y refugiándose en el Dólar Estadounidense ante el riesgo inminente de estanflación global inducida por el shock energético. El Euro, siendo una divisa pro-cíclica y altamente vulnerable a los costos de importación de energía, está sufriendo una destrucción de demanda masiva a pesar de la postura más restrictiva del BCE.</p>
+</div>
+            </div>
+        </div>
+        <!-- MR_REPORT_CARD_END -->
+<!-- MR_REPORT_CARD_START -->
             <div class="report-card">
                 <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 16:42 UTC</div>
                 <div class="content">
@@ -229,7 +222,7 @@
                 </div>
             </div>
             <!-- MR_REPORT_CARD_END -->
-            <!-- MR_REPORT_CARD_START -->
+<!-- MR_REPORT_CARD_START -->
             <div class="report-card">
                 <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 12:58 UTC</div>
                 <div class="content">
@@ -277,7 +270,7 @@
                 </div>
             </div>
             <!-- MR_REPORT_CARD_END -->
-            <!-- MR_REPORT_CARD_START -->
+<!-- MR_REPORT_CARD_START -->
             <div class="report-card">
                 <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 08:39 UTC</div>
                 <div class="content">
@@ -326,7 +319,7 @@
                 </div>
             </div>
             <!-- MR_REPORT_CARD_END -->
-            <!-- MR_REPORT_CARD_START -->
+<!-- MR_REPORT_CARD_START -->
             <div class="report-card">
                 <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 05:10 UTC</div>
                 <div class="content">
@@ -377,7 +370,7 @@
                 </div>
             </div>
             <!-- MR_REPORT_CARD_END -->
-            <!-- MR_REPORT_CARD_START -->
+<!-- MR_REPORT_CARD_START -->
             <div class="report-card">
                 <div class="timestamp">REPORTE GENERADO: 06-Mar-2026 02:08 UTC</div>
                 <div class="content">
@@ -432,7 +425,7 @@
                 </div>
             </div>
             <!-- MR_REPORT_CARD_END -->
-            <!-- MR_REPORT_CARD_START -->
+<!-- MR_REPORT_CARD_START -->
             <div class="report-card">
                 <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 20:38 UTC</div>
                 <div class="content">
@@ -474,7 +467,7 @@
                 </div>
             </div>
             <!-- MR_REPORT_CARD_END -->
-            <!-- MR_REPORT_CARD_START -->
+<!-- MR_REPORT_CARD_START -->
             <div class="report-card">
                 <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 18:05 UTC</div>
                 <div class="content">
@@ -517,7 +510,7 @@
                 </div>
             </div>
             <!-- MR_REPORT_CARD_END -->
-            <!-- MR_REPORT_CARD_START -->
+<!-- MR_REPORT_CARD_START -->
             <div class="report-card">
                 <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 13:03 UTC</div>
                 <div class="content">
@@ -569,7 +562,7 @@
                 </div>
             </div>
             <!-- MR_REPORT_CARD_END -->
-            <!-- MR_REPORT_CARD_START -->
+<!-- MR_REPORT_CARD_START -->
             <div class="report-card">
                 <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 08:43 UTC</div>
                 <div class="content">
@@ -621,44 +614,6 @@
                 </div>
             </div>
             <!-- MR_REPORT_CARD_END -->
-            <!-- MR_REPORT_CARD_START -->
-            <div class="report-card">
-                <div class="timestamp">REPORTE GENERADO: 05-Mar-2026 05:13 UTC</div>
-                <div class="content">
-                    <div class="report-section">
-                        <h3>1. Estado del Conductor (Bonos)</h3>
-                        <p>El diferencial de rendimiento (spread) entre el <strong>US 10Y Treasury (4.12%)</strong> y el
-                            <strong>German Bund 10Y (2.76%)</strong> se sitúa actualmente en <strong>136 puntos básicos
-                                (bps)</strong>. Este diferencial se ha ampliado en las últimas 24 horas debido a un
-                            repunte en los rendimientos estadounidenses, impulsado por el temor a una espiral
-                            inflacionaria global. La dirección del flujo es inequívoca: el capital está abandonando la
-                            deuda europea en favor de la seguridad y el mayor carry del Tesoro de EE. UU., lo que ejerce
-                            una presión mecánica bajista sobre el par EUR/USD.
-                        </p>
-
-                        <h3>2. Datos Recientes y Narrativa</h3>
-                        <p><strong>Validación de Recencia (Últimas 6 horas):</strong> El mercado está procesando la
-                            escalada bélica directa entre Irán e Israel, con reportes de ataques en centros estratégicos
-                            de Teherán y Beirut. Esta narrativa de "Economía de Guerra" ha provocado un salto del 8% en
-                            los precios del petróleo WTI, lo que penaliza doblemente al Euro debido a la dependencia
-                            energética de la Eurozona. El <strong>VIX</strong> ha escalado hasta <strong>21.78</strong>,
-                            confirmando un régimen de <strong>Aversión al Riesgo (Risk-Off)</strong> extremo. Los
-                            futuros del <strong>S&P 500</strong> operan con caídas superiores al 2%, reforzando la
-                            demanda de USD como activo de reserva final.</p>
-
-                        <h3>3. Conclusión Causal Rigurosa</h3>
-                        <p><strong>DIAGNÓSTICO:</strong> La cotización del EUR/USD en la zona de <strong>1.1600</strong>
-                            es el resultado directo de una <strong>convergencia de flujos de refugio y shock de oferta
-                                energético</strong>. No existe divergencia entre el precio y los fundamentales: la caída
-                            del par está perfectamente alineada con la ampliación del spread de bonos y el colapso del
-                            sentimiento de riesgo. La causalidad actual es <strong>Geopolítica-Inflacionaria</strong>;
-                            el mercado descuenta que la Fed mantendrá tasas restrictivas por más tiempo para combatir la
-                            inflación importada por el crudo, mientras que el crecimiento europeo se ve amenazado por
-                            los costes de energía, debilitando la posición relativa del Euro.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- MR_REPORT_CARD_END -->
             <!-- MR_REPORTS_END -->
         </div>
     </div>
@@ -670,7 +625,6 @@
             };
 
             function parseDateString(dateStr) {
-                // Ignore case in case CSS uppercase altered the text
                 let parts = dateStr.toUpperCase().match(/(\d{2})-([A-Z]{3})-(\d{4})\s+(\d{2}):(\d{2})\s+UTC/);
                 if (parts) {
                     const isoStr = parts[3] + "-" + months[parts[2]] + "-" + parts[1] + "T" + parts[4] + ":" + parts[5] + ":00Z";
@@ -711,13 +665,11 @@
             }
 
             document.querySelectorAll('.timestamp').forEach(function (ts) {
-                // Usamos textContent en lugar de innerText para evitar el text-transform: uppercase de CSS
                 if (!ts.dataset.original) {
                     ts.dataset.original = ts.textContent.trim();
                 }
 
                 const text = ts.dataset.original;
-                // Buscamos ignorando case sensitiveness
                 const dateMatch = text.match(/REPORTE GENERADO:\s+(.*)/i);
 
                 if (dateMatch && dateMatch[1]) {
@@ -736,5 +688,4 @@
         });
     </script>
 </body>
-
 </html>
