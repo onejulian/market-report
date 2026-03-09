@@ -12,14 +12,14 @@ import (
 	"google.golang.org/genai"
 )
 
-func GetGeminiAnalysis() (string, error) {
+func GetGeminiAnalysis() (*genai.Client, string, error) {
 	apiKey := os.Getenv("GEMINI_API_KEY")
 	if apiKey == "" {
 		godotenv.Load()
 		apiKey = os.Getenv("GEMINI_API_KEY")
 	}
 	if apiKey == "" {
-		return "", fmt.Errorf("falta la API key, define GEMINI_API_KEY en las variables de entorno")
+		return nil, "", fmt.Errorf("falta la API key, define GEMINI_API_KEY en las variables de entorno")
 	}
 
 	ctx := context.Background()
@@ -28,7 +28,7 @@ func GetGeminiAnalysis() (string, error) {
 		APIKey:  apiKey,
 	})
 	if err != nil {
-		return "", fmt.Errorf("error al crear el cliente de genai: %v", err)
+		return nil, "", fmt.Errorf("error al crear el cliente de genai: %v", err)
 	}
 
 	nowStr := time.Now().UTC().Format("2006-01-02 15:04 UTC")
@@ -110,7 +110,7 @@ func GetGeminiAnalysis() (string, error) {
 
 		if err == nil {
 			fmt.Println("\n>>> Análisis completado.")
-			return result.Text(), nil
+			return client, result.Text(), nil
 		}
 
 		lastErr = err
@@ -138,5 +138,5 @@ func GetGeminiAnalysis() (string, error) {
 		}
 	}
 
-	return "", fmt.Errorf("API de Gemini no disponible después de %d intentos, ultimo error: %w", len(attempts), lastErr)
+	return nil, "", fmt.Errorf("API de Gemini no disponible después de %d intentos, ultimo error: %w", len(attempts), lastErr)
 }

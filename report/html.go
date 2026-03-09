@@ -153,6 +153,133 @@ func UpdateHTML(newReportContent string) error {
             color: #fbbf24; /* Amber para la conclusión */
         }
 
+        /* ======= SECCIÓN DE PROYECCIÓN / FORECAST ======= */
+        .forecast-section {
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 2px dashed rgba(168, 85, 247, 0.35);
+            position: relative;
+        }
+
+        .forecast-section::before {
+            content: "PROYECCIÓN";
+            position: absolute;
+            top: -11px;
+            left: 20px;
+            background: var(--bg-card);
+            padding: 0 12px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: #a855f7;
+            text-transform: uppercase;
+        }
+
+        .forecast-section h3 {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .forecast-section h3::before {
+            content: none;
+        }
+
+        .forecast-section p {
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            font-size: 0.92rem;
+        }
+
+        .forecast-section strong {
+            color: #c084fc;
+            font-weight: 600;
+        }
+
+        /* Tabla de eventos catalizadores */
+        .events-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.85rem;
+        }
+
+        .events-table thead th {
+            background: rgba(168, 85, 247, 0.12);
+            color: #c084fc;
+            text-align: left;
+            padding: 10px 12px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            border-bottom: 2px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .events-table tbody td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .events-table tbody tr:hover {
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        /* Badges de importancia */
+        .badge-critico, .badge-crítico {
+            background: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            border: 1px solid rgba(239, 68, 68, 0.25);
+        }
+
+        .badge-alto {
+            background: rgba(251, 191, 36, 0.12);
+            color: #fbbf24;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            border: 1px solid rgba(251, 191, 36, 0.2);
+        }
+
+        .badge-moderado {
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        /* Veredicto de proyección */
+        .forecast-section p:last-child strong {
+            color: #a855f7;
+        }
+
+        /* Responsive tabla */
+        @media (max-width: 600px) {
+            .events-table {
+                font-size: 0.78rem;
+            }
+            .events-table thead th,
+            .events-table tbody td {
+                padding: 8px 6px;
+            }
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
