@@ -52,7 +52,7 @@ func GetTrendForecast(client *genai.Client, previousAnalysis string) (string, er
 
     OUTPUT FORMAT (HTML puro, sin markdown, sin tags html/body):
     <div class="forecast-section">
-      <h3>🔮 Persistencia de la Tendencia Actual</h3>
+      <h3>Persistencia de la Tendencia Actual</h3>
       <p><strong>Tendencia dominante:</strong> [descripción]</p>
       <p><strong>Duración estimada:</strong> [rango temporal]</p>
       <p><strong>Escenario base:</strong> [descripción]</p>
