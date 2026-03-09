@@ -133,6 +133,133 @@
             color: #fbbf24; /* Amber para la conclusión */
         }
 
+        /* ======= SECCIÓN DE PROYECCIÓN / FORECAST ======= */
+        .forecast-section {
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 2px dashed rgba(168, 85, 247, 0.35);
+            position: relative;
+        }
+
+        .forecast-section::before {
+            content: "PROYECCIÓN";
+            position: absolute;
+            top: -11px;
+            left: 20px;
+            background: var(--bg-card);
+            padding: 0 12px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: #a855f7;
+            text-transform: uppercase;
+        }
+
+        .forecast-section h3 {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .forecast-section h3::before {
+            content: none;
+        }
+
+        .forecast-section p {
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            font-size: 0.92rem;
+        }
+
+        .forecast-section strong {
+            color: #c084fc;
+            font-weight: 600;
+        }
+
+        /* Tabla de eventos catalizadores */
+        .events-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.85rem;
+        }
+
+        .events-table thead th {
+            background: rgba(168, 85, 247, 0.12);
+            color: #c084fc;
+            text-align: left;
+            padding: 10px 12px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            border-bottom: 2px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .events-table tbody td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .events-table tbody tr:hover {
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        /* Badges de importancia */
+        .badge-critico, .badge-crítico {
+            background: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            border: 1px solid rgba(239, 68, 68, 0.25);
+        }
+
+        .badge-alto {
+            background: rgba(251, 191, 36, 0.12);
+            color: #fbbf24;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            border: 1px solid rgba(251, 191, 36, 0.2);
+        }
+
+        .badge-moderado {
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        /* Veredicto de proyección */
+        .forecast-section p:last-child strong {
+            color: #a855f7;
+        }
+
+        /* Responsive tabla */
+        @media (max-width: 600px) {
+            .events-table {
+                font-size: 0.78rem;
+            }
+            .events-table thead th,
+            .events-table tbody td {
+                padding: 8px 6px;
+            }
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -155,6 +282,90 @@
         
         <div id="archive">
             <!-- MR_REPORTS_START -->
+<!-- MR_REPORT_CARD_START -->
+        <div class="report-card">
+            <div class="timestamp">REPORTE GENERADO: 09-Mar-2026 13:50 UTC</div>
+            <div class="content">
+                <div class="report-section">
+  <h3>1. Estado del Conductor (Bonos)</h3>
+  <p><strong>Rendimientos Actuales:</strong> El US 10Y Treasury cotiza en <strong>4.22%</strong>, mientras que el Bund alemán a 10 años se ubica en <strong>2.89%</strong>. El spread soberano es de <strong>+133 bps</strong> a favor de Estados Unidos.</p>
+  <p><strong>Flujo de Capital:</strong> La dirección del spread dicta un flujo masivo hacia el USD. A pesar de la debilidad económica interna, los rendimientos estadounidenses han repuntado violentamente debido a los temores inflacionarios globales. El capital está buscando refugio y rendimiento en la curva estadounidense frente a la extrema vulnerabilidad energética europea.</p>
+  
+  <h3>2. Datos Recientes y Narrativa</h3>
+  <ul>
+    <li><strong>Fijación de Bancos Centrales (Expectativas):</strong> Los futuros de fondos federales (Fed Fund Futures) han retrasado drásticamente las expectativas de recortes de tasas, empujando el próximo movimiento de la Fed hasta septiembre de 2026. El shock petrolero anula cualquier posibilidad de flexibilización a corto plazo.</li>
+    <li><strong>Sentimiento de Riesgo (El Humor):</strong> El índice VIX ha explotado por encima de <strong>31.08</strong> (zona de pánico), mientras que los futuros del S&P 500 caen un <strong>1.3%</strong>. El mercado se encuentra en un régimen absoluto de "Risk-Off".</li>
+    <li><strong>Validación de Calendario (El Catalizador):</strong> El dato de Nóminas No Agrícolas (NFP) de EE.UU. del viernes fue desastroso (-92K empleos vs +58K esperados). Sin embargo, este indicador es ahora <em>Stale Data</em> frente al verdadero catalizador de las últimas 24 horas: la disrupción en el Estrecho de Ormuz y la escalada bélica en Medio Oriente, que ha disparado el crudo WTI a máximos de $110-$119/bbl. Hoy a las 10:00 AM ET se esperan las Expectativas de Inflación del Consumidor de la Fed de NY, las cuales cobrarán vital importancia.</li>
+  </ul>
+  
+  <h3>3. Conclusión Causal Rigurosa</h3>
+  <p><strong>DIVERGENCIA DETECTADA:</strong> Existe una anomalía fundamental crítica. Los datos de empleo de EE.UU. colapsaron hace 72 horas, lo cual dicta debilidad del USD según la macroeconomía tradicional. Sin embargo, el EUR/USD está cayendo agresivamente hacia la zona de <strong>1.1575</strong>. Esta divergencia se explica puramente por flujos de posicionamiento: el shock geopolítico del fin de semana ha mutado la narrativa del mercado de "desaceleración económica" a "estanflación severa".</p>
+  <p><strong>DIAGNÓSTICO:</strong> La acción del precio actual en el EUR/USD no responde a los fundamentales de crecimiento, sino a un pánico de liquidez. La correlación cruzada confirma que la caída del par está dictada por un VIX > 30 y un repunte de los rendimientos del Tesoro impulsado por el petróleo. El USD está actuando estrictamente como activo refugio (Safe-Haven) y cobertura contra la inflación energética, aplastando al Euro debido a la asimetría estructural y dependencia energética de la Eurozona.</p>
+</div>
+<div class="forecast-section">
+  <h3>🔮 Persistencia de la Tendencia Actual</h3>
+  <p><strong>Tendencia dominante:</strong> Caída agresiva del EUR/USD (fortaleza extrema del USD) impulsada por flujos de refugio seguro (Risk-Off) y temores de estanflación severa a raíz del shock geopolítico y energético en Medio Oriente.</p>
+  <p><strong>Duración estimada:</strong> 1 a 3 semanas (fase aguda de pánico de liquidez y reajuste de primas de riesgo).</p>
+  <p><strong>Escenario base:</strong> El EUR/USD continuará presionado a la baja hacia la zona de 1.1575. Mientras el crudo WTI se mantenga por encima de los $110/bbl y el VIX en zona de pánico (>30), el mercado ignorará la debilidad del mercado laboral estadounidense (NFP negativo). El USD seguirá actuando como cobertura contra la inflación energética, explotando la vulnerabilidad estructural y la dependencia energética de la Eurozona.</p>
+  <p><strong>Escenario alternativo:</strong> Una resolución diplomática rápida o una intervención coordinada (ej. liberación masiva de Reservas Estratégicas de Petróleo por el G7) que desplome el crudo. Esto disiparía el pánico inflacionario, devolviendo el foco a los pésimos datos de empleo de EE.UU. y provocando una fuerte reversión alcista en el EUR/USD debido a la revalorización de recortes de tasas de la Fed.</p>
+  <p><strong>Triggers de invalidación:</strong> 1) Cierre diario del crudo WTI por debajo de $90/bbl. 2) Caída del índice VIX consolidando por debajo del nivel de 20. 3) Intervención de emergencia o tono extremadamente "hawkish" del BCE para defender la divisa europea.</p>
+
+  <h3>📅 Próximos Catalizadores Clave</h3>
+  <table class="events-table">
+    <thead>
+      <tr>
+        <th>Fecha/Hora (UTC)</th>
+        <th>Evento</th>
+        <th>Impacto en Tendencia</th>
+        <th>Importancia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2026-03-09 14:00</td>
+        <td>NY Fed Consumer Inflation Expectations</td>
+        <td><strong>Potencia:</strong> Un repunte en las expectativas inflacionarias a 1 y 5 años por el shock petrolero validará la narrativa de estanflación, forzando a la Fed a mantener tasas altas y fortaleciendo al USD.</td>
+        <td><span class="badge-alto">ALTO</span></td>
+      </tr>
+      <tr>
+        <td>FECHA POR CONFIRMAR</td>
+        <td>US Consumer Price Index (CPI) - Febrero 2026</td>
+        <td><strong>Potencia:</strong> Si la inflación subyacente muestra resistencia o aceleración, el mercado descartará por completo recortes de tasas a corto plazo, acelerando la huida hacia el rendimiento del USD.</td>
+        <td><span class="badge-critico">CRÍTICO</span></td>
+      </tr>
+      <tr>
+        <td>2026-03-12 12:30</td>
+        <td>US Initial Jobless Claims</td>
+        <td><strong>Revierte (Leve):</strong> Un aumento drástico en las solicitudes de desempleo recordaría al mercado la fragilidad económica interna de EE.UU. (alineado al NFP previo), provocando tomas de ganancias temporales en el USD.</td>
+        <td><span class="badge-moderado">MODERADO</span></td>
+      </tr>
+      <tr>
+        <td>FECHA POR CONFIRMAR</td>
+        <td>ECB Monetary Policy Decision</td>
+        <td><strong>Potencia / Revierte:</strong> Si el BCE adopta un tono "dovish" por miedo a una recesión industrial en Europa, el EUR/USD se hundirá más (potencia). Si anuncian medidas de línea dura para frenar la inflación importada, podría revertir la caída.</td>
+        <td><span class="badge-critico">CRÍTICO</span></td>
+      </tr>
+      <tr>
+        <td>2026-03-18 18:00</td>
+        <td>FOMC Interest Rate Decision & Economic Projections</td>
+        <td><strong>Potencia:</strong> Se espera que la Fed mantenga las tasas sin cambios (pausa "hawkish"). La confirmación oficial de que no habrá flexibilización monetaria a corto plazo consolidará la fortaleza del dólar.</td>
+        <td><span class="badge-critico">CRÍTICO</span></td>
+      </tr>
+      <tr>
+        <td>2026-03-18 18:30</td>
+        <td>FOMC Press Conference (Jerome Powell)</td>
+        <td><strong>Potencia:</strong> Si Powell enfatiza que el shock energético impide relajar la política monetaria a pesar de la debilidad del empleo, el USD mantendrá su estatus de refugio absoluto frente al Euro.</td>
+        <td><span class="badge-critico">CRÍTICO</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>⚡ Veredicto de Proyección</h3>
+  <p><strong>PROYECCIÓN:</strong> La tendencia bajista del EUR/USD tiene una alta probabilidad de persistir durante las próximas 1 a 3 semanas, dominada por el pánico de liquidez y el shock energético que anulan temporalmente los fundamentales económicos tradicionales. El primer evento que podría alterar este curso será la publicación del IPC de EE.UU. o la decisión de política monetaria del BCE, pero hasta que el crudo WTI no ceda terreno, el dólar mantendrá su hegemonía como activo refugio con un nivel de confianza del 85%.</p>
+</div>
+            </div>
+        </div>
+        <!-- MR_REPORT_CARD_END -->
 <!-- MR_REPORT_CARD_START -->
         <div class="report-card">
             <div class="timestamp">REPORTE GENERADO: 09-Mar-2026 13:07 UTC</div>
@@ -352,24 +563,6 @@
   
   <h3>3. Conclusión Causal Rigurosa</h3>
   <p><strong>DIAGNÓSTICO:</strong> La cotización actual del EUR/USD (1.1600 - 1.1620) está temporalmente desconectada de su ancla de bonos. La causalidad de la debilidad del Euro radica estrictamente en una correlación negativa con el <strong>VIX</strong> y la prima de refugio del Dólar. Aunque los pésimos datos de empleo en EE.UU. (NFP negativo) y la inflación persistente en Europa justifican un Euro más fuerte por la vía de la política monetaria (BCE hawkish vs Fed forzada a recortar), el pánico geopolítico y el riesgo de una guerra comercial anulan los fundamentales macroeconómicos. El capital institucional está liquidando activos de riesgo europeos y acumulando liquidez en USD como cobertura direccional.</p>
-</div>
-            </div>
-        </div>
-        <!-- MR_REPORT_CARD_END -->
-<!-- MR_REPORT_CARD_START -->
-        <div class="report-card">
-            <div class="timestamp">REPORTE GENERADO: 08-Mar-2026 02:11 UTC</div>
-            <div class="content">
-                <div class="report-section">
-  <h3>1. Estado del Conductor (Bonos)</h3>
-  <p>El flujo de capital actual está dictado por una revalorización del riesgo inflacionario global. Al cierre del viernes 6 de marzo de 2026, el rendimiento del <strong>US 10-Year Treasury</strong> se sitúa en <strong>4.13%</strong>, tras haber tocado máximos no vistos desde febrero. Por su parte, el <strong>Germany 10-Year Bund</strong> cotiza en <strong>2.86%</strong>. El spread soberano se mantiene en un robusto <strong>+127 puntos básicos</strong> a favor del dólar estadounidense. La dinámica clave aquí es que los rendimientos en ambos lados del Atlántico están subiendo impulsados por el encarecimiento de la energía (WTI rozando los $88/barril por el conflicto en Medio Oriente), lo que neutraliza cualquier intento de compresión del spread que pudiera favorecer al euro.</p>
-  
-  <h3>2. Datos Recientes y Narrativa</h3>
-  <p><strong>Validación de Calendario (Últimas 48 horas):</strong> El reporte de Nóminas No Agrícolas (NFP) de EE.UU. publicado el 6 de marzo de 2026 arrojó una <em>Hard Data</em> recesiva: destrucción de <strong>-92K empleos</strong> (frente a los +59K esperados) y un aumento de la tasa de desempleo al <strong>4.4%</strong>. Sin embargo, los salarios promedio por hora se mantuvieron rígidos (+0.4% MoM).</p>
-  <p><strong>Hard Data vs. Narrativa del Mercado:</strong> Teóricamente, una contracción laboral de esta magnitud debería hundir al USD por expectativas de recortes de la Fed. No obstante, la narrativa dominante es el <strong>"Shock Estanflacionario" y la aversión al riesgo</strong>. Los futuros de fondos federales (CME FedWatch) muestran que el mercado está reduciendo las apuestas de recortes de tasas debido al repunte del petróleo. El sentimiento de riesgo está roto: el <strong>S&P 500</strong> cerró con una caída del 1.3% en 6,740 puntos, y el índice <strong>VIX</strong> se disparó más de un 24% hasta <strong>23.75</strong>, confirmando una fuerte demanda por cobertura y liquidez.</p>
-  
-  <h3>3. Conclusión Causal Rigurosa</h3>
-  <p><strong>DIAGNÓSTICO: DIVERGENCIA MACRO-PRECIO CONFIRMADA.</strong> El EUR/USD ha caído hacia la zona de 1.1560 - 1.1620 a pesar de un reporte NFP desastroso en EE.UU. Esta anomalía causal se explica estrictamente por la estructura de flujos. El USD no está subiendo por fortaleza macroeconómica, sino por <strong>flujos masivos de refugio seguro (Safe-Haven)</strong> ante el colapso de los activos de riesgo (Risk-Off). Además, el shock exógeno de los precios de la energía penaliza estructuralmente a la Eurozona —altamente dependiente de importaciones energéticas— deteriorando los términos de intercambio del EUR frente al USD. La causalidad actual del precio es 100% flujo de aversión al riesgo y re-fijación de primas de inflación, ignorando por completo la debilidad del mercado laboral estadounidense.</p>
 </div>
             </div>
         </div>
