@@ -7,8 +7,8 @@ const RetryDelay = 30 * time.Second
 const MaxReports = 10
 
 // --- CONFIGURACIÓN ---
-const ModelID = "gemini-pro-latest"
-const ModelIDFallback = "gemini-flash-latest"
+const ModelID = "gemini-flash-latest"
+const ModelIDFallback = "gemini-pro-latest"
 
 // --- 1. SYSTEM PROMPT ---
 const SysInstruct = `### ROLE
